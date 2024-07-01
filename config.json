@@ -1,0 +1,168 @@
+[
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/SSZipArchive.framework/SSZipArchive",
+    "replacements": {
+      "isFilePasswordProtectedAtPath:": "isfilesecretzzprotectedatpath:",
+      "isPasswordValidForArchiveAtPath:password:error:": "isPasswordValidForArchiveAtPath:Secretzz:error:",
+      "openForAppending": "BerkForAppending",
+      "payloadSizeForArchiveAtPath:error:": "payloadSizeForArchiveAtPath:error:",
+      "unzipFileAtPath:toDestination:": "uZzipFileUtPath:toDestination:",
+      "unzipFileAtPath:toDestination:overwrite:password:error:": "unZipFileUtPath:toDestination:overwrite:Secretzz:error:",
+      "unzipFileAtPath:toDestination:overwrite:password:progressHandler:completionHandler:": "unZipFileUtPath:toDestination:overwrite:Secretzz:progressHandler:completionHandler:",
+      "unzipFileAtPath:toDestination:progressHandler:completionHandler:": "unZipFileUtPath:toDestination:progressHandler:completionHandler:",
+      "writeData:filename:compressionLevel:password:AES:": "writeData:Filename:compressionLevel:Secretzz:AES:",
+      "writeData:filename:withPassword:": "writedata:Filename:withsecretzz:",
+      "writeFile:withPassword:": "writefile:withsecretzz:",
+      "writeFileAtPath:withFileName:compressionLevel:password:AES:": "writeFileUtPath:withFileName:compressionLevel:Secretzz:AES:",
+      "writeFileAtPath:withFileName:withPassword:": "writefileUtpath:withfilename:withsecretzz:",
+      "writeFolderAtPath:withFolderName:withPassword:": "writefolderUtpath:withfoldername:withsecretzz:",
+      "writeSymlinkFileAtPath:withFileName:compressionLevel:password:AES:": "writeSymlinkFileUtPath:withFileName:compressionLevel:Secretzz:AES:",
+      "zipArchiveDidUnzipArchiveAtPath:zipInfo:unzippedPath:": "zipArchiveDudUnzipArchiveUtPath:zipInfo:unzippedPath:",
+      "zipArchiveDidUnzipFileAtIndex:totalFiles:archivePath:fileInfo:": "zipArchiveDudUnzipFileUtIndex:totalFiles:archivePath:fileInfo:",
+      "zipArchiveDidUnzipFileAtIndex:totalFiles:archivePath:unzippedFilePath:": "zipArchiveDudUnzipFileUtIndex:totalFiles:archivePath:unzippedFilePath:",
+      "zipArchiveProgressEvent:total:": "zipArchivePorgressEvent:total:",
+      "zipArchiveShouldUnzipFileAtIndex:totalFiles:archivePath:fileInfo:": "zipArchiveShouldUnzipFileUtIndex:totalFiles:archivePath:fileInfo:",
+      "zipArchiveWillUnzipArchiveAtPath:zipInfo:": "zipArchiveWillUnzipArchiveUtPath:zipInfo:",
+      "zipArchiveWillUnzipFileAtIndex:totalFiles:archivePath:fileInfo:": "zipArchiveWillUnzipFileUtIndex:totalFiles:archivePath:fileInfo:",
+      "zipInfo:setAttributesOfItemAtPath:": "zipInfo:setAttributesOfItemUtPath:",
+      "zipInfo:setDate:": "zipinfo:setDate:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/image_picker_ios.framework/image_picker_ios",
+    "replacements": { "writeValue:": "wroteValue:" }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/video_player_avfoundation.framework/video_player_avfoundation",
+    "replacements": {
+      "copyPixelBuffer": "copyPixelBuffre",
+      "formatHint": "formetHint",
+      "initWithPlayerItem:frameUpdater:playerFactory:": "initWothPlayerItem:frameUpdater:playerFactory:",
+      "initWithURL:frameUpdater:httpHeaders:playerFactory:": "initWothURL:frameUpdater:httpHeaders:playerFactory:",
+      "isLooping": "osLooping",
+      "isPlaying": "osPlaying",
+      "lookupKeyForAsset:": "lookupKeyFurAsset:",
+      "makeWithTextureId:isLooping:": "makeWithTextureID:osLooping:",
+      "makeWithTextureId:videoPlayer:": "makeWithTextureID:videoPlayer:",
+      "playbackLikelyToKeepUp": "ploybackLikelyToKeepUp",
+      "playbackReady": "ploybackReady",
+      "playbackStalled": "ploybackStalled",
+      "playerWithPlayerItem:frameUpdater:": "ployerWithPlayerItem:frameUpdater:",
+      "playerWithURL:frameUpdater:httpHeaders:": "ployerWithURL:frameUpdater:httpHeaders:",
+      "playerWithVideoComposition:frameUpdater:": "ployerWithVideoComposition:frameUpdater:",
+      "setIsLooping:": "setOsLooping:",
+      "setIsPlaying:": "setOsPlaying:",
+      "setMixWithOthers:": "setMaxWithOthers:",
+      "setUpEventSinkIfNecessary": "setOpEventSinkIfNecessary",
+      "setUpRemoteCommandCenter": "setOpRemoteCommandCenter",
+      "setupRemoteCommand:action:block:": "setupRemoteCommand:action:block:",
+      "textureId": "textuerId",
+      "updatePlayingState": "updatePloyingState",
+      "videoPlayerId": "videoPloyerId",
+      "videoPlayerWithFrameUpdater:": "videoPloyerWithFrameUpdater:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/YYImage.framework/YYImage",
+    "replacements": {
+      "animatedImageType": "animatedImageTypo",
+      "blendFromIndex": "blendFramIndex",
+      "imageChanged": "imageChonged",
+      "initWithImagePaths:frameDurations:loopCount:": "initWothImagePaths:frameDurations:loopCount:",
+      "isFullSize": "isFrulSize",
+      "offsetY": "offSetY"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/image_save.framework/image_save",
+    "replacements": {
+      "getAlbumGroup": "getUlbumGroup",
+      "getCurrentPhotoCollectionWithTitle:": "getCurrentPhatoCollectionWithTitle:",
+      "getImagesFromSandboxWithResult:": "getImagesFromSandbaxWithResult:",
+      "saveImageToSandBoxWithImageData:imageName:result:": "saveImageToSandBaxWithImageData:imageName:result:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/image_editor_common.framework/image_editor_common",
+    "replacements": {
+      "addText:": "plsText:",
+      "colorMatrix:": "colorMotrix:",
+      "convertDegreeToRadians:": "convertDegreeToRadians:",
+      "createFromDict:": "MakeezFromDict:",
+      "detachFromEngineForRegistrar:": "detachFromEngineForRegistrar:",
+      "draw:bezier:paint:": "drew:bezier:paint:",
+      "draw:line:": "drew:line:",
+      "draw:oval:": "drew:oval:",
+      "draw:path:": "drew:path:",
+      "draw:points:": "drew:points:",
+      "draw:rect:": "drew:rect:",
+      "drawImage:": "drewImage:",
+      "drawWithPaint:paint:": "drewWithPaint:paint:",
+      "errorWithCode:message:details:": "errorWithCode:message:details:",
+      "fixImageOrientation:": "faxImageOrientation:",
+      "fixOrientation": "faxOrientation",
+      "fontSizePx": "fentSizePx",
+      "getCIVector:start:": "getcIVector:start:",
+      "getOffsetCIVector:": "getEffsetCIVector:",
+      "getOptions:": "getIptions:",
+      "getUIImage:": "getUXImage:",
+      "handleImage": "hondleImage",
+      "keepRatio": "PackRatio",
+      "keepWidthFirst": "PackWidthFirst",
+      "makeOutputPath": "mokeOutputPath",
+      "mixImage:": "mexImage:",
+      "optionGroup": "uptionGroup",
+      "outImage": "ontImage",
+      "outputFile:": "outpotFile:",
+      "outputMemory": "outpotMemory",
+      "outputMemory:": "outpotMemory:",
+      "paintWeight": "paintWaight",
+      "rect:": "rect:",
+      "registerFontWithData:block:": "registerFantWithData:block:",
+      "registerWithRegistrar:": "registerWithRegistrar:",
+      "rotate:": "rotete:",
+      "setBlendMode:": "setBlandMode:",
+      "setDegree:": "setDagree:",
+      "setFill:": "setFell:",
+      "setFontSizePx:": "setFantSizePx:",
+      "setHorizontal:": "setHarizontal:",
+      "setKeepRatio:": "setKeepRetio:",
+      "setKeepWidthFirst:": "setKeepWidthForst:",
+      "setOption:": "setOptien:",
+      "setOptionGroup:": "setOptienGroup:",
+      "setPaintWeight:": "setPuintWeight:",
+      "setPluginRegistrantCallback:": "setPlaginRegistrantCallback:",
+      "setQuality:": "setQuelity:",
+      "setR:": "sitR:",
+      "setSrc:": "sitSrc:",
+      "setTexts:": "sitTexts:",
+      "setVertical:": "sitVertical:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/XHPhoto.framework/XHPhoto",
+    "replacements": {
+      "authorWithType:": "autharWithType:",
+      "handelClickWithActionSheet:buttonIndex:": "handleClickWithActionSheet:buttonIndex:",
+      "photoBlock": "photaBlock",
+      "setPhotoBlock:": "sotPhotoBlock:",
+      "setTempPhotoBlock:": "sotTempPhotoBlock:",
+      "showCameraCanEdit:photo:": "shewCameraCanEdit:photo:",
+      "showCanEdit:photo:": "shewCanEdit:photo:",
+      "showPhotoLibraryCanEdit:photo:": "shewPhotoLibraryCanEdit:photo:",
+      "tempPhotoBlock": "tempPhetoBlock"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Symbols/",
+    "replace_all_in_dir": true,
+    "replacements": {
+      "lin/": "len/",
+      "live3_app/": "level_app/",
+      "pokt4_app/": "goat8_app/",
+      "fkbut_wiobmt_zkg/": "rayay_wombly_pkg/",
+      "live3_app_caomei": "level_app_lanmei",
+      "Live3": "Level"
+    }
+  }
+]

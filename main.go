@@ -158,7 +158,6 @@ func processFile(filePath string, replacements map[string]string) error {
 	fmt.Printf("File %s modified successfully\n", filePath)
 	return nil
 }
-
 func processDirectory(dirPath string, replacements map[string]string) error {
 	return filepath.Walk(dirPath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
@@ -175,7 +174,6 @@ func processDirectory(dirPath string, replacements map[string]string) error {
 		return nil
 	})
 }
-
 func validateReplacements(replacements map[string]string) {
 	for key, value := range replacements {
 		if len(key) != len(value) {

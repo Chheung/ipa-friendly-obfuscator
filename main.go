@@ -109,6 +109,13 @@ func main() {
 		}
 	}
 
+	// Example directory to process
+	directory := "./caomei_tf_clone/Payload/Runner.app/"
+	err = utils.ProcessImagesInDirectory(directory)
+	if err != nil {
+		log.Fatalf("Failed to process images in directory: %v", err)
+	}
+
 	// Extract the .car file
 	err = utils.ExtractCARFile()
 	if err != nil {

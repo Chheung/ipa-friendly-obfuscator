@@ -13,6 +13,7 @@ type Replacement struct {
 	PathToFileName  string            `json:"path_to_file_name"`
 	ReplaceAllInDir bool              `json:"replace_all_in_dir,omitempty"`
 	Replacements    map[string]string `json:"replacements"`
+	IsGlobal        bool              `json:"is_global"`
 }
 
 func main() {
@@ -44,20 +45,30 @@ func main() {
 		log.Fatalf("Failed to parse JSON config file: %v", err)
 	}
 
+	globalReplacements := map[string]string{}
+	for _, replacement := range replacements {
+		if replacement.IsGlobal {
+			globalReplacements = mergeMap(globalReplacements, replacement.Replacements)
+		}
+	}
+
 	// Process each file and its replacements
 	for _, replacement := range replacements {
 		validateReplacements(replacement.Replacements)
 
+		x := mergeMap(globalReplacements, replacement.Replacements)
+
 		if replacement.ReplaceAllInDir {
 			// Process all files in the specified directory
 			dirPath := filepath.Dir(replacement.PathToFileName)
-			err := processDirectory(dirPath, replacement.Replacements)
+			err := processDirectory(dirPath, x)
 			if err != nil {
 				log.Printf("Failed to process directory %s: %v", dirPath, err)
 			}
 		} else {
+
 			// Process the single specified file
-			err := processFile(replacement.PathToFileName, replacement.Replacements)
+			err := processFile(replacement.PathToFileName, x)
 			if err != nil {
 				log.Printf("Failed to process file %s: %v", replacement.PathToFileName, err)
 			}
@@ -169,6 +180,18 @@ func validateReplacements(replacements map[string]string) {
 			panic("WTF")
 		}
 	}
+}
+
+func mergeMap(m1 map[string]string, m2 map[string]string) map[string]string {
+	m := map[string]string{}
+	for k, v := range m1 {
+		m[k] = v
+	}
+	for k, v := range m2 {
+		m[k] = v
+	}
+
+	return m
 }
 
 // func processImage(path string, info os.FileInfo, err error) error {

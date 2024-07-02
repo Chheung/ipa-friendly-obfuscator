@@ -4,16 +4,9 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"image"
-	"image/color"
-	"image/draw"
 	"log"
 	"os"
-	"os/exec"
 	"path/filepath"
-	"strings"
-
-	"github.com/disintegration/imaging"
 )
 
 type Replacement struct {
@@ -74,23 +67,23 @@ func main() {
 	// idir := "./caomei_tf_clone/Payload/Runner.app/Assets.car"
 
 	// Extract the .car file
-	err = extractCARFile()
-	if err != nil {
-		log.Fatalf("Failed to extract Assets.car: %v", err)
-	}
+	// err = extractCARFile()
+	// if err != nil {
+	// 	log.Fatalf("Failed to extract Assets.car: %v", err)
+	// }
 
-	extractDir := "./AssetsOutput"
-	// Process all images in the extracted directory
-	err = filepath.Walk(extractDir, processImage)
-	if err != nil {
-		fmt.Printf("error walking the path %q: %v\n", extractDir, err)
-	}
+	// extractDir := "./AssetsOutput"
+	// // Process all images in the extracted directory
+	// err = filepath.Walk(extractDir, processImage)
+	// if err != nil {
+	// 	fmt.Printf("error walking the path %q: %v\n", extractDir, err)
+	// }
 
-	// Repack the .car file
-	err = repackCARFile()
-	if err != nil {
-		log.Fatalf("Failed to repackage Assets.car: %v", err)
-	}
+	// // Repack the .car file
+	// err = repackCARFile()
+	// if err != nil {
+	// 	log.Fatalf("Failed to repackage Assets.car: %v", err)
+	// }
 
 	fmt.Println("🚀🚀🚀🚀🚀 Finally done 🚀🚀🚀🚀🚀")
 }
@@ -178,76 +171,76 @@ func validateReplacements(replacements map[string]string) {
 	}
 }
 
-func processImage(path string, info os.FileInfo, err error) error {
-	if err != nil {
-		return err
-	}
+// func processImage(path string, info os.FileInfo, err error) error {
+// 	if err != nil {
+// 		return err
+// 	}
 
-	if info.IsDir() {
-		return nil
-	}
+// 	if info.IsDir() {
+// 		return nil
+// 	}
 
-	if !isImageFile(path) {
-		return nil
-	}
+// 	if !isImageFile(path) {
+// 		return nil
+// 	}
 
-	img, err := imaging.Open(path)
-	if err != nil {
-		fmt.Printf("failed to open image: %v\n", err)
-		return nil
-	}
+// 	img, err := imaging.Open(path)
+// 	if err != nil {
+// 		fmt.Printf("failed to open image: %v\n", err)
+// 		return nil
+// 	}
 
-	// Convert to RGBA to allow modification
-	rgba := image.NewRGBA(img.Bounds())
-	draw.Draw(rgba, rgba.Bounds(), img, image.Point{}, draw.Src)
+// 	// Convert to RGBA to allow modification
+// 	rgba := image.NewRGBA(img.Bounds())
+// 	draw.Draw(rgba, rgba.Bounds(), img, image.Point{}, draw.Src)
 
-	dotColor := color.RGBA{0, 0, 0, 255} // Black color
-	dotRadius := 10                      // Radius of the dot
+// 	dotColor := color.RGBA{0, 0, 0, 255} // Black color
+// 	dotRadius := 10                      // Radius of the dot
 
-	bounds := rgba.Bounds()
-	centerX, centerY := bounds.Dx()/2, bounds.Dy()/2
+// 	bounds := rgba.Bounds()
+// 	centerX, centerY := bounds.Dx()/2, bounds.Dy()/2
 
-	for y := -dotRadius; y <= dotRadius; y++ {
-		for x := -dotRadius; x <= dotRadius; x++ {
-			if x*x+y*y <= dotRadius*dotRadius {
-				rgba.Set(centerX+x, centerY+y, dotColor)
-			}
-		}
-	}
+// 	for y := -dotRadius; y <= dotRadius; y++ {
+// 		for x := -dotRadius; x <= dotRadius; x++ {
+// 			if x*x+y*y <= dotRadius*dotRadius {
+// 				rgba.Set(centerX+x, centerY+y, dotColor)
+// 			}
+// 		}
+// 	}
 
-	err = imaging.Save(rgba, path)
-	if err != nil {
-		fmt.Printf("failed to save image: %v\n", err)
-	}
+// 	err = imaging.Save(rgba, path)
+// 	if err != nil {
+// 		fmt.Printf("failed to save image: %v\n", err)
+// 	}
 
-	fmt.Printf("Processed image: %s\n", path)
-	return nil
-}
+// 	fmt.Printf("Processed image: %s\n", path)
+// 	return nil
+// }
 
-func isImageFile(path string) bool {
-	ext := strings.ToLower(filepath.Ext(path))
-	return ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".tiff"
-}
+// func isImageFile(path string) bool {
+// 	ext := strings.ToLower(filepath.Ext(path))
+// 	return ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".tiff"
+// }
 
-func extractCARFile() error {
-	cmd := exec.Command("mkdir", "-p", "./AssetsOutput")
-	cmd2 := exec.Command("./acextract", "-i", "./caomei_tf_clone/Payload/Runner.app/Assets.car", "-o", "./AssetsOutput")
-	_, err := cmd.Output()
-	if err != nil {
-		fmt.Println(err.Error())
-		return err
-	}
+// func extractCARFile() error {
+// 	cmd := exec.Command("mkdir", "-p", "./AssetsOutput")
+// 	cmd2 := exec.Command("./acextract", "-i", "./caomei_tf_clone/Payload/Runner.app/Assets.car", "-o", "./AssetsOutput")
+// 	_, err := cmd.Output()
+// 	if err != nil {
+// 		fmt.Println(err.Error())
+// 		return err
+// 	}
 
-	_, err = cmd2.Output()
-	if err != nil {
-		fmt.Println(err.Error())
-		return err
-	}
+// 	_, err = cmd2.Output()
+// 	if err != nil {
+// 		fmt.Println(err.Error())
+// 		return err
+// 	}
 
-	return nil
-}
+// 	return nil
+// }
 
-func repackCARFile() error {
-	// cmd := exec.Command("mkdir", "-p", "./AssetsOutput")
-	return nil
-}
+// func repackCARFile() error {
+// 	// cmd := exec.Command("mkdir", "-p", "./AssetsOutput")
+// 	return nil
+// }

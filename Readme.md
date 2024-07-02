@@ -1,1 +1,1 @@
-install `npm install -g ipfs-car`
+<!-- install `npm install -g ipfs-car` -->

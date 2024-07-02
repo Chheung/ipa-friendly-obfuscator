@@ -1,5 +1,5 @@
 caomei_tf_clone/
-AssetsOutput
-./.DS_Store
+Assets.xcassets/
+.DS_Store
 final.ipa
 ipaguard_final.ipa

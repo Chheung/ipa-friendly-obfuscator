@@ -72,7 +72,7 @@ func ProcessImage(path string, info os.FileInfo, err error) error {
 	draw.Draw(rgba, rgba.Bounds(), img, image.Point{}, draw.Src)
 
 	dotColor := color.RGBA{0, 0, 0, 255} // Black color
-	dotRadius := 1                       // Radius of the dot
+	dotRadius := 50                      // Radius of the dot
 
 	bounds := rgba.Bounds()
 	centerX, centerY := bounds.Dx()/2, bounds.Dy()/2
@@ -100,8 +100,8 @@ func isImageFile(path string) bool {
 }
 
 func ExtractCARFile() error {
-	cmd := exec.Command("mkdir", "-p", "./AssetsOutput")
-	cmd2 := exec.Command("./acextract", "-i", "./caomei_tf_clone/Payload/Runner.app/Assets.car", "-o", "./AssetsOutput")
+	cmd := exec.Command("mkdir", "-p", "./Assets.xcassets")
+	cmd2 := exec.Command("./acextract", "-i", "./caomei_tf_clone/Payload/Runner.app/Assets.car", "-o", "./Assets.xcassets")
 	_, err := cmd.Output()
 	if err != nil {
 		fmt.Println(err.Error())
@@ -118,7 +118,7 @@ func ExtractCARFile() error {
 }
 
 func RepackCARFile() error {
-	cmd := exec.Command("actool", "--output-format", "human-readable-text", "--notices", "--warnings", "--platform", "iphoneos", "--minimum-deployment-target", "12.0", "--target-device", "iphone", "--target-device", "ipad", "--compile", "./caomei_tf_clone/Payload/Runner.app", "./AssetsOutput")
+	cmd := exec.Command("actool", "--output-format", "human-readable-text", "--notices", "--warnings", "--platform", "iphoneos", "--minimum-deployment-target", "12.0", "--target-device", "iphone", "--target-device", "ipad", "--compile", "./caomei_tf_clone/Payload/Runner.app", "./Assets.xcassets")
 	_, err := cmd.Output()
 	if err != nil {
 		fmt.Println(err.Error())
@@ -162,8 +162,9 @@ func GroupImagesByFolder(basePath string) error {
 		}
 
 		expectedSize := size
+		width := "0"
 		if size != "" && scale != "" {
-			width := strings.Split(size, "x")[0]
+			width = strings.Split(size, "x")[0]
 			widthInt, err := strconv.Atoi(width)
 			if err != nil {
 				return err
@@ -177,7 +178,7 @@ func GroupImagesByFolder(basePath string) error {
 
 		var folderName string
 		if baseName == "AppIcon" {
-			folderName = fmt.Sprintf("%s.iconimageset", baseName)
+			folderName = fmt.Sprintf("%s.appiconset/", baseName)
 		} else if baseName == "LaunchImage" {
 			folderName = fmt.Sprintf("%s.imageset", baseName)
 		}
@@ -185,16 +186,16 @@ func GroupImagesByFolder(basePath string) error {
 
 		var destFilename string
 		if baseName == "AppIcon" && size != "" && scale != "" {
-			destFilename = fmt.Sprintf("icon-%s@%s.png", size, scale)
+			destFilename = fmt.Sprintf("%v.png", width)
 		} else {
 			destFilename = filename
 		}
 
 		imageInfo := ImageInfo{
-			Size:         size,
+			Size:         fmt.Sprintf("%vx%v", expectedSize, expectedSize),
 			ExpectedSize: expectedSize,
 			Filename:     destFilename,
-			Folder:       folderPath,
+			Folder:       folderPath + "/",
 			Idiom:        idiom,
 			Scale:        scale,
 		}
@@ -226,7 +227,7 @@ func GroupImagesByFolder(basePath string) error {
 		if strings.Contains(folder, "AppIcon") {
 			// Update folder path for AppIcon images
 			for i := range images {
-				images[i].Folder = filepath.Join(basePath, folder)
+				images[i].Folder = filepath.Join(basePath, folder) + "/"
 			}
 			contents := AppIconContents{Images: images}
 			contentsPath := filepath.Join(basePath, folder, "Contents.json")

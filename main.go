@@ -122,7 +122,7 @@ func main() {
 		log.Fatalf("Failed to extract Assets.car: %v", err)
 	}
 
-	extractDir := "./AssetsOutput"
+	extractDir := "./Assets.xcassets"
 	// Process all images in the extracted directory
 	err = filepath.Walk(extractDir, utils.ProcessImage)
 	if err != nil {

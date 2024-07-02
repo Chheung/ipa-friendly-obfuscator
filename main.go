@@ -42,8 +42,14 @@ type LaunchImageContents struct {
 }
 
 func main() {
+	// Remove the folder "AssetsOutput" if it exists
+	err := utils.RemoveDirIfExists("AssetsOutput")
+	if err != nil {
+		log.Fatalf("Failed to remove existing AssetsOutput folder: %v", err)
+	}
+
 	// Remove the folder "caomei_tf_clone" if it exists
-	err := utils.RemoveDirIfExists("caomei_tf_clone")
+	err = utils.RemoveDirIfExists("caomei_tf_clone")
 	if err != nil {
 		log.Fatalf("Failed to remove existing caomei_tf_clone folder: %v", err)
 	}
@@ -126,6 +132,21 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to repackage Assets.car: %v", err)
 	}
+
+	// Create the final zip file
+	zipFileName := "final.zip"
+	err = utils.CreateZipFromFolder("caomei_tf_clone", zipFileName)
+	if err != nil {
+		log.Fatalf("Failed to create zip file: %v", err)
+	}
+
+	// Rename the zip file to .ipa
+	err = os.Rename(zipFileName, "final.ipa")
+	if err != nil {
+		log.Fatalf("Failed to rename zip file to ipa: %v", err)
+	}
+
+	fmt.Println("Finished compressing to final.ipa")
 
 	fmt.Println("🚀🚀🚀🚀🚀 Finally done 🚀🚀🚀🚀🚀")
 }

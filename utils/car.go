@@ -177,16 +177,23 @@ func GroupImagesByFolder(basePath string) error {
 
 		var folderName string
 		if baseName == "AppIcon" {
-			folderName = fmt.Sprintf("%s.appiconset", baseName)
+			folderName = fmt.Sprintf("%s.iconimageset", baseName)
 		} else if baseName == "LaunchImage" {
 			folderName = fmt.Sprintf("%s.imageset", baseName)
 		}
 		folderPath := filepath.Join(basePath, folderName)
 
+		var destFilename string
+		if baseName == "AppIcon" && size != "" && scale != "" {
+			destFilename = fmt.Sprintf("icon-%s@%s.png", size, scale)
+		} else {
+			destFilename = filename
+		}
+
 		imageInfo := ImageInfo{
 			Size:         size,
 			ExpectedSize: expectedSize,
-			Filename:     filename,
+			Filename:     destFilename,
 			Folder:       folderPath,
 			Idiom:        idiom,
 			Scale:        scale,
@@ -200,8 +207,8 @@ func GroupImagesByFolder(basePath string) error {
 			return err
 		}
 
-		// Move file to the new folder
-		destPath := filepath.Join(folderPath, filename)
+		// Move and rename file to the new folder
+		destPath := filepath.Join(folderPath, destFilename)
 		err = os.Rename(path, destPath)
 		if err != nil {
 			return err

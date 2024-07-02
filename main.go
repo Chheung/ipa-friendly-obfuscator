@@ -54,6 +54,10 @@ func main() {
 
 	// Process each file and its replacements
 	for _, replacement := range replacements {
+		if replacement.IsGlobal {
+			continue
+		}
+
 		validateReplacements(replacement.Replacements)
 
 		x := mergeMap(globalReplacements, replacement.Replacements)
@@ -66,7 +70,6 @@ func main() {
 				log.Printf("Failed to process directory %s: %v", dirPath, err)
 			}
 		} else {
-
 			// Process the single specified file
 			err := processFile(replacement.PathToFileName, x)
 			if err != nil {

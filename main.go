@@ -1,19 +1,12 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
-	"image"
-	"image/color"
-	"image/draw"
+	"hello/utils"
 	"log"
 	"os"
-	"os/exec"
 	"path/filepath"
-	"strings"
-
-	"github.com/disintegration/imaging"
 )
 
 type Replacement struct {
@@ -23,9 +16,34 @@ type Replacement struct {
 	IsGlobal        bool              `json:"is_global"`
 }
 
+type ImageInfo struct {
+	Size         string `json:"size"`
+	ExpectedSize string `json:"expected-size"`
+	Filename     string `json:"filename"`
+	Folder       string `json:"folder"`
+	Idiom        string `json:"idiom"`
+	Scale        string `json:"scale"`
+}
+
+type AppIconContents struct {
+	Images []ImageInfo `json:"images"`
+}
+
+type LaunchImageContents struct {
+	Images []struct {
+		Filename string `json:"filename"`
+		Idiom    string `json:"idiom"`
+		Scale    string `json:"scale"`
+	} `json:"images"`
+	Info struct {
+		Author  string `json:"author"`
+		Version int    `json:"version"`
+	} `json:"info"`
+}
+
 func main() {
 	// Remove the folder "caomei_tf_clone" if it exists
-	err := removeDirIfExists("caomei_tf_clone")
+	err := utils.RemoveDirIfExists("caomei_tf_clone")
 	if err != nil {
 		log.Fatalf("Failed to remove existing caomei_tf_clone folder: %v", err)
 	}
@@ -35,7 +53,7 @@ func main() {
 	srcFolder := "caomei_tf"
 	destFolder := "caomei_tf_clone"
 
-	err = copyDir(srcFolder, destFolder)
+	err = utils.CopyDir(srcFolder, destFolder)
 	if err != nil {
 		log.Fatalf("Failed to copy folder: %v", err)
 	}
@@ -65,20 +83,20 @@ func main() {
 			continue
 		}
 
-		validateReplacements(replacement.Replacements)
+		utils.ValidateReplacements(replacement.Replacements)
 
 		x := mergeMap(globalReplacements, replacement.Replacements)
 
 		if replacement.ReplaceAllInDir {
 			// Process all files in the specified directory
 			dirPath := filepath.Dir(replacement.PathToFileName)
-			err := processDirectory(dirPath, x)
+			err := utils.ProcessDirectory(dirPath, x)
 			if err != nil {
 				log.Printf("Failed to process directory %s: %v", dirPath, err)
 			}
 		} else {
 			// Process the single specified file
-			err := processFile(replacement.PathToFileName, x)
+			err := utils.ProcessFile(replacement.PathToFileName, x)
 			if err != nil {
 				log.Printf("Failed to process file %s: %v", replacement.PathToFileName, err)
 			}
@@ -86,106 +104,30 @@ func main() {
 	}
 
 	// Extract the .car file
-	err = extractCARFile()
+	err = utils.ExtractCARFile()
 	if err != nil {
 		log.Fatalf("Failed to extract Assets.car: %v", err)
 	}
 
 	extractDir := "./AssetsOutput"
 	// Process all images in the extracted directory
-	err = filepath.Walk(extractDir, processImage)
+	err = filepath.Walk(extractDir, utils.ProcessImage)
 	if err != nil {
 		fmt.Printf("error walking the path %q: %v\n", extractDir, err)
 	}
 
+	err = utils.GroupImagesByFolder(extractDir)
+	if err != nil {
+		log.Fatalf("Failed to group images by folder: %v", err)
+	}
+
 	// Repack the .car file
-	err = repackCARFile()
+	err = utils.RepackCARFile()
 	if err != nil {
 		log.Fatalf("Failed to repackage Assets.car: %v", err)
 	}
 
 	fmt.Println("🚀🚀🚀🚀🚀 Finally done 🚀🚀🚀🚀🚀")
-}
-
-func copyDir(src string, dest string) error {
-	return filepath.Walk(src, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		relPath, err := filepath.Rel(src, path)
-		if err != nil {
-			return err
-		}
-
-		destPath := filepath.Join(dest, relPath)
-
-		if info.IsDir() {
-			return os.MkdirAll(destPath, info.Mode())
-		} else {
-			return copyFile(path, destPath)
-		}
-	})
-}
-
-func copyFile(src string, dest string) error {
-	input, err := os.ReadFile(src)
-	if err != nil {
-		return err
-	}
-
-	return os.WriteFile(dest, input, 0644)
-}
-
-func removeDirIfExists(dir string) error {
-	if _, err := os.Stat(dir); !os.IsNotExist(err) {
-		return os.RemoveAll(dir)
-	}
-	return nil
-}
-
-func processFile(filePath string, replacements map[string]string) error {
-	data, err := os.ReadFile(filePath)
-	if err != nil {
-		return fmt.Errorf("failed to read file %s: %v", filePath, err)
-	}
-
-	modifiedData := data
-	for searchSeq, replaceSeq := range replacements {
-		modifiedData = bytes.Replace(modifiedData, []byte(searchSeq), []byte(replaceSeq), -1)
-	}
-
-	err = os.WriteFile(filePath, modifiedData, 0644)
-	if err != nil {
-		return fmt.Errorf("failed to write file %s: %v", filePath, err)
-	}
-
-	fmt.Printf("File %s modified successfully\n", filePath)
-	return nil
-}
-func processDirectory(dirPath string, replacements map[string]string) error {
-	return filepath.Walk(dirPath, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		if !info.IsDir() {
-			err := processFile(path, replacements)
-			if err != nil {
-				log.Printf("Failed to process file %s: %v", path, err)
-			}
-		}
-
-		return nil
-	})
-}
-func validateReplacements(replacements map[string]string) {
-	for key, value := range replacements {
-		if len(key) != len(value) {
-			log.Printf("replacement length mismatch: key '%s' (length %d) and value '%s' (length %d) do not match", key, len(key), value, len(value))
-			panic("WTF")
-		}
-	}
 }
 
 func mergeMap(m1 map[string]string, m2 map[string]string) map[string]string {
@@ -198,83 +140,4 @@ func mergeMap(m1 map[string]string, m2 map[string]string) map[string]string {
 	}
 
 	return m
-}
-
-func processImage(path string, info os.FileInfo, err error) error {
-	if err != nil {
-		return err
-	}
-
-	if info.IsDir() {
-		return nil
-	}
-
-	if !isImageFile(path) {
-		return nil
-	}
-
-	img, err := imaging.Open(path)
-	if err != nil {
-		fmt.Printf("failed to open image: %v\n", err)
-		return nil
-	}
-
-	// Convert to RGBA to allow modification
-	rgba := image.NewRGBA(img.Bounds())
-	draw.Draw(rgba, rgba.Bounds(), img, image.Point{}, draw.Src)
-
-	dotColor := color.RGBA{0, 0, 0, 255} // Black color
-	dotRadius := 10                      // Radius of the dot
-
-	bounds := rgba.Bounds()
-	centerX, centerY := bounds.Dx()/2, bounds.Dy()/2
-
-	for y := -dotRadius; y <= dotRadius; y++ {
-		for x := -dotRadius; x <= dotRadius; x++ {
-			if x*x+y*y <= dotRadius*dotRadius {
-				rgba.Set(centerX+x, centerY+y, dotColor)
-			}
-		}
-	}
-
-	err = imaging.Save(rgba, path)
-	if err != nil {
-		fmt.Printf("failed to save image: %v\n", err)
-	}
-
-	fmt.Printf("Processed image: %s\n", path)
-	return nil
-}
-
-func isImageFile(path string) bool {
-	ext := strings.ToLower(filepath.Ext(path))
-	return ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".tiff"
-}
-
-func extractCARFile() error {
-	cmd := exec.Command("mkdir", "-p", "./AssetsOutput")
-	cmd2 := exec.Command("./acextract", "-i", "./caomei_tf_clone/Payload/Runner.app/Assets.car", "-o", "./AssetsOutput")
-	_, err := cmd.Output()
-	if err != nil {
-		fmt.Println(err.Error())
-		return err
-	}
-
-	_, err = cmd2.Output()
-	if err != nil {
-		fmt.Println(err.Error())
-		return err
-	}
-
-	return nil
-}
-
-func repackCARFile() error {
-	cmd := exec.Command("actool", "--output-format", "human-readable-text", "--notices", "--warnings", "--platform", "iphoneos", "--minimum-deployment-target", "12.0", "--target-device", "iphone", "--target-device", "ipad", "--compile", "./caomei_tf_clone/Payload/Runner.app", "./AssetsOutput")
-	_, err := cmd.Output()
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
-	return err
 }

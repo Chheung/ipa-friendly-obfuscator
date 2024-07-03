@@ -134,6 +134,11 @@ func main() {
 		log.Fatalf("Failed to group images by folder: %v", err)
 	}
 
+	err = utils.CopyFile("./Assets.xcassets/AppIcon.appiconset/90.png", "./caomei_tf_clone/Payload/Runner.app/AppIcon60x60@2x.png")
+	if err != nil {
+		log.Fatalf("Failed to update app icon: %v", err)
+	}
+
 	// Repack the .car file
 	err = utils.RepackCARFile()
 	if err != nil {
@@ -153,7 +158,7 @@ func main() {
 		log.Fatalf("Failed to rename zip file to ipa: %v", err)
 	}
 
-	fmt.Println("Finished compressing to final.ipa")
+	// fmt.Println("Finished compressing to final.ipa")
 
 	fmt.Println("🚀🚀🚀🚀🚀 Finally done 🚀🚀🚀🚀🚀")
 }

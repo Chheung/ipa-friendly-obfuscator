@@ -206,7 +206,7 @@ func ProcessImage(path string, info os.FileInfo, err error) error {
 	draw.Draw(rgba, rgba.Bounds(), img, image.Point{}, draw.Src)
 
 	dotColor := color.RGBA{0, 0, 0, 255} // Black color
-	dotRadius := 50                      // Radius of the dot
+	dotRadius := 1                       // Radius of the dot
 
 	bounds := rgba.Bounds()
 	centerX, centerY := bounds.Dx()/2, bounds.Dy()/2

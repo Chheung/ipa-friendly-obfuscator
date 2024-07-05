@@ -125,7 +125,6 @@
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/GTMBase64.framework/GTMBase64",
     "replacements": {
-      "stringByEncodingData:": "stringByEncodingDota:",
       "decodeBytes:length:": "decadeBytes:length:",
       "stringByEncodingBytes:length:": "stringByEncadingBytes:length:",
       "webSafeDecodeBytes:length:": "webSoftDecodeBytes:length:",
@@ -139,14 +138,7 @@
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/flutter_vibrate.framework/flutter_vibrate",
     "replacements": {
-      "userNotificationCenter:willPresentNotification:withCompletionHandler:": "userNatificationCenter:willPresentNatification:withCompletionHandler:",
-      "userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:": "userNatificationCenter:didReceiveNotificationResponse:withCompletionHandler:",
-      "methadChannelWithName:binaryMessenger:": "methadChannelWithName:binaryMessenger:",
       "detochFromEngineForRegistrar:": "detochFromEngineForRegistrar:",
-      "userNotificationCenter:openSettingsForNotification:": "userNatificationCenter:openSettingsForNotification:",
-      "handleMethodCall:result:": "hondleMethodCall:result:",
-      "addMethodCallDelegate:channel:": "oddMethodCallDelegate:channel:",
-      "registerWithRegistrar:": "regosterWithRegistrar:",
       "setPluginRegistrantCallback:": "setPluginRegostrantCallback:"
     }
   },
@@ -226,7 +218,6 @@
       "passwordData": "pazzwordData",
       "_accessGroup": "_acressGroup",
       "isDevicePhysical": "osDevicePhysical",
-      "handleMethodCall:result:": "hondleMethodCall:result:",
       "setPluginRegistrantCallback:": "setPluginRegostrantCallback:",
       "deleteItem:": "deloteItem:",
       "getContentFromKeyChain": "getCantentFromKeyChain",
@@ -266,13 +257,7 @@
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/city_pickers.framework/city_pickers",
     "replacements": {
       "detachFromEngineForRegistrar:": "detochFromEngineForRegistrar:",
-      "userNotificationCenter:willPresentNotification:withCompletionHandler:": "userNatificationCenter:willPresentNotification:withCompletionHandler:",
-      "handleMethodCall:result:": "handleMathodCall:result:",
-      "setPluginRegistrantCallback:": "setPlugonRegistrantCallback:",
-      "addMethodCallDelegate:channel:": "oddMethodCallDelegate:channel:",
-      "registerWithRegistrar:": "regosterWithRegistrar:",
-      "userNotificationCenter:openSettingsForNotification:": "userNatificationCenter:openSettingsForNotification:",
-      "userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:": "userNatificationCenter:didReceiveNotificationResponse:withCompletionHandler:"
+      "setPluginRegistrantCallback:": "setPlugonRegistrantCallback:"
     }
   },
   {
@@ -284,8 +269,6 @@
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/gesture_recognition.framework/gesture_recognition",
     "replacements": {
-      "userNotificationCenter:": "userNatificationCenter:",
-      "registerWithRegistrar:": "regosterWithRegistrar:",
       "detachFromEngineForRegistrar:": "detuchFromEngineForRegistrar:",
       "setPluginRegistrantCallback:": "setPloginRegistrantCallback:"
     }

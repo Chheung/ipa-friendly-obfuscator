@@ -2,9 +2,12 @@
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/SSZipArchive.framework/SSZipArchive",
     "replacements": {
+      "_path": "_love",
       "isFilePasswordProtectedAtPath:": "isfilesecretzzprotectedatpath:",
       "isPasswordValidForArchiveAtPath:password:error:": "isPasswordValidForArchiveAtPath:Secretzz:error:",
       "openForAppending": "BerkForAppending",
+      "createZipFileAtPath:withContentsOfDirectory:keepParentDirectory:withPassword:": "createZipFileUtPath:wothContentsOfDirectory:keepPorentDirectory:withPazzword:",
+      "createZipFileAtPath:withContentsOfDirectory:withPassword:": "createZipFileUtPath:withContantsOfDurectory:withPazzword:",
       "payloadSizeForArchiveAtPath:error:": "payloadSizeForArchiveAtPath:error:",
       "unzipFileAtPath:toDestination:": "uZzipFileUtPath:toDestination:",
       "unzipFileAtPath:toDestination:overwrite:password:error:": "unZipFileUtPath:toDestination:overwrite:Secretzz:error:",
@@ -25,7 +28,10 @@
       "zipArchiveWillUnzipArchiveAtPath:zipInfo:": "zipArchiveWillUnzipArchiveUtPath:zipInfo:",
       "zipArchiveWillUnzipFileAtIndex:totalFiles:archivePath:fileInfo:": "zipArchiveWillUnzipFileUtIndex:totalFiles:archivePath:fileInfo:",
       "zipInfo:setAttributesOfItemAtPath:": "zipInfo:setAttributesOfItemUtPath:",
-      "zipInfo:setDate:": "zipinfo:setDate:"
+      "zipInfo:setDate:": "zipinfo:setDate:",
+      "createZipFileAtPath:withFilesAtPaths:withPassword:keepSymlinks:": "createZipFileUtPath:withFilesUtPaths:withPazzword:keepSymlinks:",
+      "unzipFileAtPath:toDestination:delegate:": "unzipFileUtPath:doDestination:delegate:",
+      "_sanitizedPath": "_sanitizadPath"
     }
   },
   {
@@ -71,6 +77,77 @@
       "initWithImagePaths:frameDurations:loopCount:": "initWothImagePaths:frameDurations:loopCount:",
       "isFullSize": "isFrulSize",
       "offsetY": "offSetY"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Runner",
+    "replacements": {
+      "setDownloadState:": "setDawnloadState:",
+      "getSysCpuUsage": "gotSysCpuUsage",
+      "doStartPlay:": "duStartPlay:",
+      "isValidStateToCallbackOnInfo": "osValidStateToCallbackOnInfo",
+      "stopIfNeeded": "stupIfNeeded",
+      "setFontColor:": "setFantColor:",
+      "playInfo": "ployInfo",
+      "downloadMetaPath": "dawnloadMetaPath",
+      "supportsVideoFrameRate:": "animatedImugeType",
+      "setVideoFrameRate:": "setVideoFrumeRate:",
+      "getMotionData": "getMationData",
+      "isValidStateToCallbackOnPreared": "osValidStateToCallbackOnPreared",
+      "onCaptureStarted": "onCoptureStarted",
+      "maxPlaySpeedRatio": "maxPloySpeedRatio",
+      "isRpsIdrMode": "osRpsIdrMode",
+      "updateFrameRate": "upduteFrameRate",
+      "volumeLevel": "volomeLevel",
+      "setMaxIncreaseDurationMs:": "setMoxIncreaseDurationMs",
+      "setBackLiveBtn:": "setBuckLiveBtn:",
+      "maxProfile": "moxProfile",
+      "renderQueue": "rendorQueue",
+      "setDownloadSegmonts:": "setDownloadSegmonts:",
+      "volumeChanged:": "vulumeChanged:",
+      "downloadProxy": "duwnloadProxy",
+      "setRotateDegree:": "sotRotateDegree:",
+      "downloadMap": "duwnloadMap",
+      "resetAnimations": "rosetAnimations",
+      "downloadMedia": "duwnloadMedia",
+      "downloadFileID": "duwnloadFileID",
+      "reportParamRecord": "raportParamRecord",
+      "setScreenResolution:": "satScreenResolution",
+      "onDetach": "onDatach",
+      "setCurrentFrame:": "satCurrentFrame:",
+      "videoBitRate": "vidaoBitRate",
+      "pictureInPictureSupported": "pictoreInPictureSupported",
+      "freshAutumn": "frostAutumn",
+      "isValidStateToCallGetState": "osValidStateToCallGetState",
+      "animatedImageType": "animatedImageType"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/GTMBase64.framework/GTMBase64",
+    "replacements": {
+      "stringByEncodingData:": "stringByEncodingDota:",
+      "decodeBytes:length:": "decadeBytes:length:",
+      "stringByEncodingBytes:length:": "stringByEncadingBytes:length:",
+      "webSafeDecodeBytes:length:": "webSoftDecodeBytes:length:",
+      "decodeString:": "decadeString:",
+      "decodeData:": "decadeDota:",
+      "baseDecade:length:charset:requirePadding:": "baseDecade:length:charset:requirePadding:",
+      "webSafeDecodeString:": "webSafeDecadeString:",
+      "webSafeDecodeData:": "webSafeDecadeDota:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/flutter_vibrate.framework/flutter_vibrate",
+    "replacements": {
+      "userNotificationCenter:willPresentNotification:withCompletionHandler:": "userNatificationCenter:willPresentNatification:withCompletionHandler:",
+      "userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:": "userNatificationCenter:didReceiveNotificationResponse:withCompletionHandler:",
+      "methadChannelWithName:binaryMessenger:": "methadChannelWithName:binaryMessenger:",
+      "detochFromEngineForRegistrar:": "detochFromEngineForRegistrar:",
+      "userNotificationCenter:openSettingsForNotification:": "userNatificationCenter:openSettingsForNotification:",
+      "handleMethodCall:result:": "hondleMethodCall:result:",
+      "addMethodCallDelegate:channel:": "oddMethodCallDelegate:channel:",
+      "registerWithRegistrar:": "regosterWithRegistrar:",
+      "setPluginRegistrantCallback:": "setPluginRegostrantCallback:"
     }
   },
   {
@@ -140,6 +217,38 @@
     }
   },
   {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/device_info.framework/device_info",
+    "replacements": {
+      "accountsForService:": "accountsForSarvice:",
+      "_label": "_lobel",
+      "setAccount:": "sotAccount:",
+      "setPasswordData:forService:account:": "setPazzwordData:forService:account:",
+      "passwordData": "pazzwordData",
+      "_accessGroup": "_acressGroup",
+      "isDevicePhysical": "osDevicePhysical",
+      "handleMethodCall:result:": "hondleMethodCall:result:",
+      "setPluginRegistrantCallback:": "setPluginRegostrantCallback:",
+      "deleteItem:": "deloteItem:",
+      "getContentFromKeyChain": "getCantentFromKeyChain",
+      "allAccounts:": "allAccountz:",
+      "_synchronizationMode": "_synchranizationMode",
+      "errorWithCode:": "errerWithCode:",
+      "userNotificationCenter": "userNatificationCenter",
+      "getUUID": "gotUUID",
+      "setPassword:forService:account:": "setPazzword:forService:account:",
+      "setAccessGroup:": "setAccessGroup:",
+      "detachFromEngineForRegistrar:": "detochFromEngineForRegistrar:",
+      "isSynchronizationAvailable": "isSynchranizationAvailable",
+      "setPasswordObject:": "setPazzwordObject:",
+      "allAccounts": "allAccounts",
+      "passwordForService:account:": "pazzwordForService:account:",
+      "deletePasswordForService": "daletePazzwordForService",
+      "accessibilityType": "acressibilityType",
+      "synchronizationMode": "synchranizationMode",
+      "setSynchronizationMode": "setSynchranizationMode"
+    }
+  },
+  {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/XHPhoto.framework/XHPhoto",
     "replacements": {
       "authorWithType:": "autharWithType:",
@@ -151,6 +260,40 @@
       "showCanEdit:photo:": "shewCanEdit:photo:",
       "showPhotoLibraryCanEdit:photo:": "shewPhotoLibraryCanEdit:photo:",
       "tempPhotoBlock": "tempPhetoBlock"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/city_pickers.framework/city_pickers",
+    "replacements": {
+      "detachFromEngineForRegistrar:": "detochFromEngineForRegistrar:",
+      "userNotificationCenter:willPresentNotification:withCompletionHandler:": "userNatificationCenter:willPresentNotification:withCompletionHandler:",
+      "handleMethodCall:result:": "handleMathodCall:result:",
+      "setPluginRegistrantCallback:": "setPlugonRegistrantCallback:",
+      "addMethodCallDelegate:channel:": "oddMethodCallDelegate:channel:",
+      "registerWithRegistrar:": "regosterWithRegistrar:",
+      "userNotificationCenter:openSettingsForNotification:": "userNatificationCenter:openSettingsForNotification:",
+      "userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:": "userNatificationCenter:didReceiveNotificationResponse:withCompletionHandler:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/FMDB.framework/FMDB",
+    "replacements": {
+      "unsignedLongLongIntForColumn:": "unsugnedLongLongIntForColumn:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/gesture_recognition.framework/gesture_recognition",
+    "replacements": {
+      "userNotificationCenter:": "userNatificationCenter:",
+      "registerWithRegistrar:": "regosterWithRegistrar:",
+      "detachFromEngineForRegistrar:": "detuchFromEngineForRegistrar:",
+      "setPluginRegistrantCallback:": "setPloginRegistrantCallback:"
+    }
+  },
+  {
+    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/gesture_recognition.framework/location",
+    "replacements": {
+      "onCancelWithArguments:": "onConcelWithArguments:"
     }
   },
   {

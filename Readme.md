@@ -1,1 +1,1 @@
-<!-- install `npm install -g ipfs-car` -->
+Go to XCode and install IPhone Stimulator

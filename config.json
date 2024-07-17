@@ -40,33 +40,7 @@
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/video_player_avfoundation.framework/video_player_avfoundation",
-    "replacements": {
-      "copyPixelBuffer": "copyPixelBuffre",
-      "formatHint": "formetHint",
-      "initWithPlayerItem:frameUpdater:playerFactory:": "initWothPlayerItem:frameUpdater:playerFactory:",
-      "initWithURL:frameUpdater:httpHeaders:playerFactory:": "initWothURL:frameUpdater:httpHeaders:playerFactory:",
-      "isLooping": "osLooping",
-      "isPlaying": "osPlaying",
-      "lookupKeyForAsset:": "lookupKeyFurAsset:",
-      "makeWithTextureId:isLooping:": "makeWithTextureID:osLooping:",
-      "makeWithTextureId:videoPlayer:": "makeWithTextureID:videoPlayer:",
-      "playbackLikelyToKeepUp": "ploybackLikelyToKeepUp",
-      "playbackReady": "ploybackReady",
-      "playbackStalled": "ploybackStalled",
-      "playerWithPlayerItem:frameUpdater:": "ployerWithPlayerItem:frameUpdater:",
-      "playerWithURL:frameUpdater:httpHeaders:": "ployerWithURL:frameUpdater:httpHeaders:",
-      "playerWithVideoComposition:frameUpdater:": "ployerWithVideoComposition:frameUpdater:",
-      "setIsLooping:": "setOsLooping:",
-      "setIsPlaying:": "setOsPlaying:",
-      "setMixWithOthers:": "setMaxWithOthers:",
-      "setUpEventSinkIfNecessary": "setOpEventSinkIfNecessary",
-      "setUpRemoteCommandCenter": "setOpRemoteCommandCenter",
-      "setupRemoteCommand:action:block:": "setupRemoteCommand:action:block:",
-      "textureId": "textuerId",
-      "updatePlayingState": "updatePloyingState",
-      "videoPlayerId": "videoPloyerId",
-      "videoPlayerWithFrameUpdater:": "videoPloyerWithFrameUpdater:"
-    }
+    "replacements": {}
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/YYImage.framework/YYImage",

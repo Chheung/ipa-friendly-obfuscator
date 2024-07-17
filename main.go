@@ -116,23 +116,23 @@ func main() {
 		log.Fatalf("Failed to process images in directory: %v", err)
 	}
 
-	// Extract the .car file
-	err = utils.ExtractCARFile()
-	if err != nil {
-		log.Fatalf("Failed to extract Assets.car: %v", err)
-	}
+	// // Extract the .car file
+	// err = utils.ExtractCARFile()
+	// if err != nil {
+	// 	log.Fatalf("Failed to extract Assets.car: %v", err)
+	// }
 
-	extractDir := "./Assets.xcassets"
-	// Process all images in the extracted directory
-	err = filepath.Walk(extractDir, utils.ProcessImage)
-	if err != nil {
-		fmt.Printf("error walking the path %q: %v\n", extractDir, err)
-	}
+	// extractDir := "./Assets.xcassets"
+	// // Process all images in the extracted directory
+	// err = filepath.Walk(extractDir, utils.ProcessImage)
+	// if err != nil {
+	// 	fmt.Printf("error walking the path %q: %v\n", extractDir, err)
+	// }
 
-	err = utils.GroupImagesByFolder(extractDir)
-	if err != nil {
-		log.Fatalf("Failed to group images by folder: %v", err)
-	}
+	// err = utils.GroupImagesByFolder(extractDir)
+	// if err != nil {
+	// 	log.Fatalf("Failed to group images by folder: %v", err)
+	// }
 
 	icon1Path := "./caomei_tf_clone/Payload/Runner.app/AppIcon60x60@2x.png"
 	err = utils.ConvertCgBIToPng(icon1Path, icon1Path)
@@ -166,11 +166,11 @@ func main() {
 		log.Fatalf("Failed to process images in directory: %v", err)
 	}
 
-	// Repack the .car file
-	err = utils.RepackCARFile()
-	if err != nil {
-		log.Fatalf("Failed to repackage Assets.car: %v", err)
-	}
+	// // Repack the .car file
+	// err = utils.RepackCARFile()
+	// if err != nil {
+	// 	log.Fatalf("Failed to repackage Assets.car: %v", err)
+	// }
 
 	// Create the final zip file
 	zipFileName := "final.zip"

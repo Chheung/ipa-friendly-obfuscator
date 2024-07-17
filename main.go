@@ -134,14 +134,36 @@ func main() {
 		log.Fatalf("Failed to group images by folder: %v", err)
 	}
 
-	err = utils.CopyFile("./Assets.xcassets/AppIcon.appiconset/90.png", "./caomei_tf_clone/Payload/Runner.app/AppIcon60x60@2x.png")
+	icon1Path := "./caomei_tf_clone/Payload/Runner.app/AppIcon60x60@2x.png"
+	err = utils.ConvertCgBIToPng(icon1Path, icon1Path)
 	if err != nil {
-		log.Fatalf("Failed to update app icon: %v", err)
+		log.Fatalf("Error converting CgBI to PNG: %v", err)
 	}
 
-	err = utils.CopyFile("./Assets.xcassets/AppIcon.appiconset/90.png", "./caomei_tf_clone/Payload/Runner.app/AppIcon76x76@2x~ipad.png")
+	icon1, err := os.Stat(icon1Path)
 	if err != nil {
-		log.Fatalf("Failed to update app icon: %v", err)
+		log.Fatalf("Error getting image stats of icon1: %v", err)
+	}
+
+	icon2Path := "./caomei_tf_clone/Payload/Runner.app/AppIcon76x76@2x~ipad.png"
+	err = utils.ConvertCgBIToPng(icon2Path, icon2Path)
+	if err != nil {
+		log.Fatalf("Error converting CgBI to PNG: %v", err)
+	}
+
+	icon2, err := os.Stat(icon2Path)
+	if err != nil {
+		log.Fatalf("Error getting image stats of icon2: %v", err)
+	}
+
+	err = utils.ProcessImage(icon1Path, icon1, nil)
+	if err != nil {
+		log.Fatalf("Failed to process images in directory: %v", err)
+	}
+
+	err = utils.ProcessImage(icon2Path, icon2, nil)
+	if err != nil {
+		log.Fatalf("Failed to process images in directory: %v", err)
 	}
 
 	// Repack the .car file

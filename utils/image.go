@@ -7,6 +7,7 @@ import (
 	"image/color"
 	"image/draw"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"regexp"
 	"strconv"
@@ -197,7 +198,7 @@ func ProcessImage(path string, info os.FileInfo, err error) error {
 
 	img, err := imaging.Open(path)
 	if err != nil {
-		fmt.Printf("failed to open image: %v\n", err)
+		fmt.Printf("failed to open image: %v\n. Path: %v", err, path)
 		return nil
 	}
 
@@ -231,4 +232,14 @@ func ProcessImage(path string, info os.FileInfo, err error) error {
 func Is(path string) bool {
 	ext := strings.ToLower(filepath.Ext(path))
 	return ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".tiff"
+}
+
+func ConvertCgBIToPng(in, out string) error {
+	cmd := exec.Command("./CgbiPngFix", "-i", in, "-o", out)
+	_, err := cmd.Output()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	return err
 }

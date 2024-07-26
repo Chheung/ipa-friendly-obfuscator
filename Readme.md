@@ -1,8 +1,4 @@
-Go to XCode and install IPhone Stimulator
-
----- Manual steps:
-
-How to generate Assets folders:
-
-1. go to: https://www.appicon.co/
-2. Download and place it in the "Assets.xcassets"
+1. Go to XCode and install IPhone Stimulator
+2. Copy ur app and rename it to caomei_tf
+3. Update config.json to match obfuscation
+4. go run main.go

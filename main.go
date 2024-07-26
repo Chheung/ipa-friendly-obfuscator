@@ -201,3 +201,37 @@ func mergeMap(m1 map[string]string, m2 map[string]string) map[string]string {
 
 	return m
 }
+
+// func main() {
+// 	// Specify the directory to search
+// 	dir := "./caomei_tf"
+// 	targetString := []byte("live3_app_caomei")
+
+// 	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
+// 		if err != nil {
+// 			return err
+// 		}
+
+// 		if !info.IsDir() {
+// 			// Read the file
+// 			data, err := ioutil.ReadFile(path)
+// 			if err != nil {
+// 				fmt.Printf("Failed to read file %s: %v\n", path, err)
+// 				return nil
+// 			}
+
+// 			// Check if the file contains the target string
+// 			if bytes.Contains(data, targetString) {
+// 				fmt.Printf("File contains target string: %s\n", path)
+// 			}
+// 		}
+// 		return nil
+// 	})
+
+// 	if err != nil {
+// 		fmt.Printf("Error walking the path %q: %v\n", dir, err)
+// 		return
+// 	}
+
+// 	fmt.Println("DUNE")
+// }

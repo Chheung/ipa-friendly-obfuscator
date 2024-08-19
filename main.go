@@ -10,10 +10,10 @@ import (
 )
 
 type Replacement struct {
-	PathToFileName  string            `json:"path_to_file_name"`
-	ReplaceAllInDir bool              `json:"replace_all_in_dir,omitempty"`
-	Replacements    map[string]string `json:"replacements"`
-	IsGlobal        bool              `json:"is_global"`
+	PathToFileName  string              `json:"path_to_file_name"`
+	ReplaceAllInDir bool                `json:"replace_all_in_dir,omitempty"`
+	Replacements    map[string][]string `json:"replacements"`
+	IsGlobal        bool                `json:"is_global"`
 }
 
 type ImageInfo struct {
@@ -76,7 +76,7 @@ func main() {
 		log.Fatalf("Failed to parse JSON config file: %v", err)
 	}
 
-	globalReplacements := map[string]string{}
+	globalReplacements := map[string][]string{}
 	for _, replacement := range replacements {
 		if replacement.IsGlobal {
 			globalReplacements = mergeMap(globalReplacements, replacement.Replacements)
@@ -190,8 +190,8 @@ func main() {
 	fmt.Println("🚀🚀🚀🚀🚀 Finally done 🚀🚀🚀🚀🚀")
 }
 
-func mergeMap(m1 map[string]string, m2 map[string]string) map[string]string {
-	m := map[string]string{}
+func mergeMap(m1 map[string][]string, m2 map[string][]string) map[string][]string {
+	m := map[string][]string{}
 	for k, v := range m1 {
 		m[k] = v
 	}

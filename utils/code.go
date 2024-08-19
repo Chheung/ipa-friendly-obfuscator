@@ -4,11 +4,12 @@ import (
 	"bytes"
 	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"path/filepath"
 )
 
-func ProcessFile(filePath string, replacements map[string]string) error {
+func ProcessFile(filePath string, replacements map[string][]string) error {
 	data, err := os.ReadFile(filePath)
 	if err != nil {
 		return fmt.Errorf("failed to read file %s: %v", filePath, err)
@@ -16,7 +17,8 @@ func ProcessFile(filePath string, replacements map[string]string) error {
 
 	modifiedData := data
 	for searchSeq, replaceSeq := range replacements {
-		modifiedData = bytes.Replace(modifiedData, []byte(searchSeq), []byte(replaceSeq), -1)
+		randIdx := rand.Intn(len(replaceSeq))
+		modifiedData = bytes.Replace(modifiedData, []byte(searchSeq), []byte(replaceSeq[randIdx]), -1)
 	}
 
 	err = os.WriteFile(filePath, modifiedData, 0644)
@@ -28,7 +30,7 @@ func ProcessFile(filePath string, replacements map[string]string) error {
 	return nil
 }
 
-func ProcessDirectory(dirPath string, replacements map[string]string) error {
+func ProcessDirectory(dirPath string, replacements map[string][]string) error {
 	return filepath.Walk(dirPath, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -45,11 +47,13 @@ func ProcessDirectory(dirPath string, replacements map[string]string) error {
 	})
 }
 
-func ValidateReplacements(replacements map[string]string) {
-	for key, value := range replacements {
-		if len(key) != len(value) {
-			log.Printf("replacement length mismatch: key '%s' (length %d) and value '%s' (length %d) do not match", key, len(key), value, len(value))
-			panic("WTF")
+func ValidateReplacements(replacements map[string][]string) {
+	for key, values := range replacements {
+		for _, value := range values {
+			if len(key) != len(value) {
+				log.Printf("replacement length mismatch: key '%s' (length %d) and value '%s' (length %d) do not match", key, len(key), value, len(value))
+				panic("WTF")
+			}
 		}
 	}
 }

@@ -4,15 +4,15 @@
     "replacements": {
       "_path": ["_love", "_hate", "_good", "_fear", "_fire", "_aura"],
       "isFilePasswordProtectedAtPath:": [
-        "isfilesecretzzprotectedatpath:",
-        "isfilehiddenzzprotectedatpath:",
-        "isfilezecretlyprotectedatpath:",
-        "isfilezecretzzprotectedatpath:"
+        "isfilesecretzzProtectedAtpath:",
+        "isfilehiddenzzProtectedAtpath:",
+        "isfilezecretlyProtectedAtpath:",
+        "isfilezecretzzProtectedAtpath:"
       ],
       "isPasswordValidForArchiveAtPath:password:error:": [
-        "isPasswordValidForArchiveAtPath:Secretzz:error:",
+        "isPasswordValidForArchiveAtPath:secretzz:error:",
         "isPasswordValidForArchiveAtPath:hiddenzz:error:",
-        "isPasswordValidForArchiveAtPath:Zecretzz:error:",
+        "isPasswordValidForArchiveAtPath:zecretzz:error:",
         "isPasswordValidForArchiveAtPath:zecretly:error:"
       ],
       "openForAppending": [
@@ -21,26 +21,82 @@
         "SingForAppending"
       ],
       "createZipFileAtPath:withContentsOfDirectory:keepParentDirectory:withPassword:": [
-        "createZipFileUtPath:wothContentsOfDirectory:keepPorentDirectory:withPazzword:"
+        "createZipFileUtPath:wothContentsOfDirectory:keepPorentDirectory:withPazzword:",
+        "createZipFileAtPath:linkContentsOfDirectory:keepPurantDirectory:withSecretly:",
+        "createZipFileAtPath:withContentsOfDirectory:keepParentDirectory:withHiddenzz:",
+        "createZipFileAtPath:withContentsOfDirectory:keepParentDirectory:withZecretly:",
+        "createZipFileAtPath:withContentsOfDirectory:keepParentDirectory:withZecretzz:",
+        "inventZipFileUtPath:wothContentsOfDirectory:keepParentDirectory:withPassword:",
+        "createZipFileUtRoad:wothContentsOfDirectory:keepParentDirectory:withPassword:",
+        "createZipFileUtPath:wothContentsOfCatalogue:keepParentDirectory:plusPassword:",
+        "createZipFileUtPath:wothContentsOfCatalogue:keepOriginDirectory:plusPassword:"
       ],
       "createZipFileAtPath:withContentsOfDirectory:withPassword:": [
-        "createZipFileUtPath:withContantsOfDurectory:withPazzword:"
+        "createZipFileUtPath:withContantsOfDurectory:withPazzword:",
+        "createZipFileAtPath:withContuntsOfDirectory:withPassword:",
+        "createZipFileUtPath:withContentsOfDarectory:withPazzword:",
+        "inventZipFileAtPath:withContantsOfDirectory:withPassword:",
+        "createZipFileAtPath:withContantsOfCatalogue:withPassword:",
+        "designZipNoteAtPath:withContantsOfDirectory:withPassword:",
+        "createZipNoteAtPath:withContantsOfDirectory:withPasscode:"
       ],
       "payloadSizeForArchiveAtPath:error:": [
-        "payloadSizeForArchiveAtPath:error:"
+        "payloadSizeForArchiveAtPath:error:",
+        "puyloadSuzeForArchiveAtPath:error:",
+        "payloadSlzeForArchiveAtPath:error:",
+        "puyloadSizeForArchiveAtPath:error:",
+        "freightSizeForArchiveAtPath:error:",
+        "payloadSizeForRecorrdAtPath:error:",
+        "payloadSizeForRecorrdAtRoad:error:",
+        "payloadRankForArchiveAtPath:error:"
       ],
-      "unzipFileAtPath:toDestination:": ["uZzipFileUtPath:toDestination:"],
+      "unzipFileAtPath:toDestination:": [
+        "uZzipFileUtPath:toDestination:",
+        "anzipFileAtPath:toDestination:",
+        "umzipFileAtPath:toDestination:",
+        "amzipFileAtPath:toDestination:",
+        "unzipFileAtRoad:toDestination:",
+        "unzipDataAtPath:toDestination:",
+        "unzipFileOfPath:toDestination:",
+        "unzipFileAtPath:byDestination:"
+      ],
+
       "unzipFileAtPath:toDestination:overwrite:password:error:": [
-        "unZipFileUtPath:toDestination:overwrite:Secretzz:error:"
+        "unZipFileUtPath:toDestination:overwrite:secretzz:error:",
+        "umZipFileAtPath:toDestination:overwrite:password:error:",
+        "unZipFileAtPath:toDestination:overwrite:hiddenzz:error:",
+        "unZipFileAtPath:toDestination:overwrite:zecretly:error:",
+        "unZipFileAtPath:toDestination:overwrite:zecretzz:error:",
+        "unzipFileByPath:toDestination:overwrite:password:error:",
+        "unzipFileAtPath:toArrivalspot:overwrite:password:error:",
+        "unzipFileAtPath:toDestination:supersede:password:error:"
       ],
       "unzipFileAtPath:toDestination:overwrite:password:progressHandler:completionHandler:": [
-        "unZipFileUtPath:toDestination:overwrite:Secretzz:progressHandler:completionHandler:"
+        "unZipFileUtPath:toDestination:overwrite:secretzz:progressHandler:completionHandler:",
+        "umZipFileUtPath:toDestination:overwrite:password:progressHandler:completionHandler:",
+        "unZipFileUtPath:toDestination:overwrite:hiddenzz:progressHandler:completionHandler:",
+        "unZipFileUtPath:toDestination:overwrite:zecretly:progressHandler:completionHandler:",
+        "unZipFileUtPath:toDestination:overwrite:zecretzz:progressHandler:completionHandler:",
+        "unzipFileAtPath:byDestination:overwrite:password:progressHandler:completionHandler:",
+        "unzipFileAtPath:toDestination:overwrite:secretzz:progressHandler:completionHandler:",
+        "unzipFileAtPath:toArrivalspot:overwrite:password:progressHandler:completionHandler:",
+        "unzipFileAtPath:toDestination:supersede:password:progressHandler:completionHandler:"
       ],
       "unzipFileAtPath:toDestination:progressHandler:completionHandler:": [
-        "unZipFileUtPath:toDestination:progressHandler:completionHandler:"
+        "unZipFileUtPath:toDestination:progressHandler:completionHandler:",
+        "umzipFileAtPath:toDestination:progressHandler:completionHandler:",
+        "unZipFileUtPath:toDestination:progressHandler:completionHandler:",
+        "unzipFileAtPath:toDestination:progressHandler:zoologicalHandler:",
+        "unzipFileAtPath:toDestination:zionlessHandler:completionHandler:",
+        "unzipFileAtPath:toDestination:progressHandler:completionZorgite:"
       ],
       "writeData:filename:compressionLevel:password:AES:": [
-        "writeData:Filename:compressionLevel:Secretzz:AES:"
+        "writeData:Filename:compressionLevel:Secretzz:AES:",
+        "writeData:filename:compressionLevel:arretine:AES:",
+        "writeData:filename:compressionLooks:password:AES:",
+        "writeData:scariest:compressionLevel:password:AES:",
+        "writeData:filename:landgravineLevel:password:AES:",
+        "writeDays:filename:compressionLevel:password:AES:"
       ],
       "writeData:filename:withPassword:": ["writedata:Filename:withsecretzz:"],
       "writeFile:withPassword:": ["writefile:withsecretzz:"],

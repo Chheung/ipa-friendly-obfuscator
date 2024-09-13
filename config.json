@@ -300,133 +300,305 @@
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/image_editor_common.framework/image_editor_common",
     "replacements": {
-      "addText:": ["plsText:"],
-      "colorMatrix:": ["colorMotrix:"],
-      "convertDegreeToRadians:": ["convertDegreeToRadians:"],
-      "createFromDict:": ["MakeezFromDict:"],
-      "detachFromEngineForRegistrar:": ["detachFromEngineForRegistrar:"],
-      "draw:bezier:paint:": ["drew:bezier:paint:"],
-      "draw:line:": ["drew:line:"],
-      "draw:oval:": ["drew:oval:"],
-      "draw:path:": ["drew:path:"],
-      "draw:points:": ["drew:points:"],
-      "draw:rect:": ["drew:rect:"],
-      "drawImage:": ["drewImage:"],
-      "drawWithPaint:paint:": ["drewWithPaint:paint:"],
-      "errorWithCode:message:details:": ["errorWithCode:message:details:"],
-      "fixImageOrientation:": ["faxImageOrientation:"],
-      "fixOrientation": ["faxOrientation"],
-      "fontSizePx": ["fentSizePx"],
-      "getCIVector:start:": ["getcIVector:start:"],
-      "getOffsetCIVector:": ["getEffsetCIVector:"],
-      "getOptions:": ["getIptions:"],
-      "getUIImage:": ["getUXImage:"],
-      "handleImage": ["hondleImage"],
-      "keepRatio": ["PackRatio"],
-      "keepWidthFirst": ["PackWidthFirst"],
-      "makeOutputPath": ["mokeOutputPath"],
-      "mixImage:": ["mexImage:"],
-      "optionGroup": ["uptionGroup"],
-      "outImage": ["ontImage"],
-      "outputFile:": ["outpotFile:"],
-      "outputMemory": ["outpotMemory"],
-      "outputMemory:": ["outpotMemory:"],
-      "paintWeight": ["paintWaight"],
-      "rect:": ["rect:"],
-      "registerFontWithData:block:": ["registerFantWithData:block:"],
-      "registerWithRegistrar:": ["registerWithRegistrar:"],
-      "rotate:": ["rotete:"],
-      "setBlendMode:": ["setBlandMode:"],
-      "setDegree:": ["setDagree:"],
-      "setFill:": ["setFell:"],
-      "setFontSizePx:": ["setFantSizePx:"],
-      "setHorizontal:": ["setHarizontal:"],
-      "setKeepRatio:": ["setKeepRetio:"],
-      "setKeepWidthFirst:": ["setKeepWidthForst:"],
-      "setOption:": ["setOptien:"],
-      "setOptionGroup:": ["setOptienGroup:"],
-      "setPaintWeight:": ["setPuintWeight:"],
-      "setPluginRegistrantCallback:": ["setPlaginRegistrantCallback:"],
-      "setQuality:": ["setQuelity:"],
-      "setR:": ["sitR:"],
-      "setSrc:": ["sitSrc:"],
-      "setTexts:": ["sitTexts:"],
-      "setVertical:": ["sitVertical:"]
+      "addText:": ["plsText:", "pluText:", "plsTixt:"],
+      "colorMatrix:": ["colorMotrix:", "calorMatrix:", "colorMutrix:"],
+      "convertDegreeToRadians:": [
+        "convertDegreeToRadians:",
+        "convertDagreeToRadians:",
+        "cunvertDegreeToRadians:"
+      ],
+      "createFromDict:": [
+        "MakeezFromDict:",
+        "MakeezFrimDict:",
+        "MokeezFromDict:"
+      ],
+      "detachFromEngineForRegistrar:": [
+        "detachFromEngineForRegistrar:",
+        "ditachFromEngineForRegistrar:",
+        "detachFrumEngineForRegistrar:"
+      ],
+      "draw:bezier:paint:": [
+        "drew:bezier:paint:",
+        "drow:bezier:paint:",
+        "draw:bozier:paint:"
+      ],
+      "draw:line:": ["drew:line:", "drow:line:", "draw:lone:"],
+      "draw:oval:": ["drew:oval:", "draw:uval:", "draw:ovel:"],
+      "draw:path:": ["drew:path:", "draw:peth:", "drow:path:"],
+      "draw:points:": ["drew:points:", "draw:ponts:", "draw:peints:"],
+      "draw:rect:": ["drew:rect:", "drow:rect:", "draw:ract:"],
+      "drawImage:": ["drewImage:", "drowImage:", "drawEmage:"],
+      "drawWithPaint:paint:": [
+        "drewWithPaint:paint:",
+        "drawWethPaint:paint:",
+        "drawWithPeint:paint:"
+      ],
+      "errorWithCode:message:details:": [
+        "errorWithCode:message:details:",
+        "errotWithCode:message:details:",
+        "errorWithCade:message:details:"
+      ],
+      "fixImageOrientation:": [
+        "faxImageOrientation:",
+        "fixUmageOrientation:",
+        "fixImageOrientetion:"
+      ],
+      "fixOrientation": ["faxOrientation", "fuxOrientation", "fexOrientation"],
+      "fontSizePx": ["fentSizePx", "fantSizePx", "fontSozePx"],
+      "getCIVector:start:": [
+        "getcIVector:start:",
+        "gitCIVector:start:",
+        "getCIVactor:start:"
+      ],
+      "getOffsetCIVector:": [
+        "getEffsetCIVector:",
+        "gotOffsetCIVector:",
+        "getOffsitCIVector:"
+      ],
+      "getOptions:": ["getIptions:", "gitOptions:", "getUptions:"],
+      "getUIImage:": ["getUXImage:", "gotUIImage:", "getUXOmage:"],
+      "handleImage": ["hondleImage", "hindleImage", "hundleImage"],
+      "keepRatio": ["PackRatio", "PeckRatio", "PickRatio"],
+      "keepWidthFirst": ["PackWidthFirst", "PeckWidthFirst", "PickWidthFirst"],
+      "makeOutputPath": ["mokeOutputPath", "mukeOutputPath", "mikeOutputPath"],
+      "mixImage:": ["mexImage:", "mixUmage:", "moxImage:"],
+      "optionGroup": ["uptionGroup", "aptionGroup", "uptoenGroup"],
+      "outImage": ["ontImage", "oatImage", "uotImage"],
+      "outputFile:": ["outpotFile:", "autputFile:", "outputFole:"],
+      "outputMemory": ["outpotMemory", "autputMemory", "outputMimory"],
+      "outputMemory:": ["outpotMemory:", "autputMemory:", "outputMimory:"],
+      "paintWeight": ["paintWaight", "pointWeight", "peintWeight"],
+      "rect:": ["rect:", "ract:", "rict:"],
+      "registerFontWithData:block:": [
+        "registerFantWithData:block:",
+        "rigisterFontWithData:block:",
+        "registerFintWithData:block:"
+      ],
+      "registerWithRegistrar:": [
+        "registerWithRegistrar:",
+        "rigisterWithRegistrar:",
+        "regusterWithRegistrar:"
+      ],
+      "rotate:": ["rotete:", "rutate:", "retate:"],
+      "setBlendMode:": ["setBlandMode:", "sitBlendMode:", "sutBlendMode:"],
+      "setDegree:": ["setDagree:", "sitDegree:", "setDigree:"],
+      "setFill:": ["setFell:", "sitFill:", "sutFill:"],
+      "setFontSizePx:": ["setFantSizePx:", "sitFontSizePx:", "setFontSuzePx:"],
+      "setHorizontal:": ["setHarizontal:", "sitHorizontal:", "sutHorizontal:"],
+      "setKeepRatio:": ["setKeepRetio:", "setKaepRatio:", "sitKeepRatio:"],
+      "setKeepWidthFirst:": [
+        "setKeepWidthForst:",
+        "sitKeepWidthFirst:",
+        "sutKeepWidthFirst:"
+      ],
+      "setOption:": ["setOptien:", "sitOption:", "sutOption:"],
+      "setOptionGroup:": [
+        "setOptienGroup:",
+        "sitOptionGroup:",
+        "sutOptionGroup:"
+      ],
+      "setPaintWeight:": [
+        "setPuintWeight:",
+        "sitPaintWeight:",
+        "sutPaintWeight:"
+      ],
+      "setPluginRegistrantCallback:": [
+        "setPlaginRegistrantCallback:",
+        "sitPluginRegistrantCallback:",
+        "sutPluginRegistrantCallback:"
+      ],
+      "setQuality:": ["setQuelity:", "sitQuality:", "sutQuality:"],
+      "setR:": ["sitR:", "sutR:", "setE:"],
+      "setSrc:": ["sitSrc:", "sutSrc:", "sitSre:"],
+      "setTexts:": ["sitTexts:", "sutTexts:", "setTects:"],
+      "setVertical:": ["sitVertical:", "sutVertical:", "setVerticol:"]
     }
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/device_info.framework/device_info",
     "replacements": {
-      "accountsForService:": ["accountsForSarvice:"],
-      "_label": ["_lobel"],
-      "setAccount:": ["sotAccount:"],
-      "setPasswordData:forService:account:": [
-        "setPazzwordData:forService:account:"
+      "accountsForService:": [
+        "accountsForSarvice:",
+        "eccountsForService:",
+        "accountsForSercice:"
       ],
-      "passwordData": ["pazzwordData"],
-      "_accessGroup": ["_acressGroup"],
-      "isDevicePhysical": ["osDevicePhysical"],
-      "setPluginRegistrantCallback:": ["setPluginRegostrantCallback:"],
-      "deleteItem:": ["deloteItem:"],
-      "getContentFromKeyChain": ["getCantentFromKeyChain"],
-      "allAccounts:": ["allAccountz:"],
-      "_synchronizationMode": ["_synchranizationMode"],
-      "errorWithCode:": ["errerWithCode:"],
-      "userNotificationCenter": ["userNatificationCenter"],
-      "getUUID": ["gotUUID"],
-      "setPassword:forService:account:": ["setPazzword:forService:account:"],
-      "setAccessGroup:": ["setAccessGroup:"],
-      "detachFromEngineForRegistrar:": ["detochFromEngineForRegistrar:"],
-      "isSynchronizationAvailable": ["isSynchranizationAvailable"],
-      "setPasswordObject:": ["setPazzwordObject:"],
-      "allAccounts": ["allAccounts"],
-      "passwordForService:account:": ["pazzwordForService:account:"],
-      "deletePasswordForService": ["daletePazzwordForService"],
-      "accessibilityType": ["acressibilityType"],
-      "synchronizationMode": ["synchranizationMode"],
-      "setSynchronizationMode": ["setSynchranizationMode"]
+      "_label": ["_lobel", "_lebel", "_labal"],
+      "setAccount:": ["sotAccount:", "setEcceunt:", "setAccaunt:"],
+      "setPasswordData:forService:account:": [
+        "setPazzwordData:forService:account:",
+        "sitPasswordData:forService:account:",
+        "sutPasswordData:forService:account:"
+      ],
+      "passwordData": ["pazzwordData", "pesswordData", "passwurdData"],
+      "_accessGroup": ["_acressGroup", "_eccassGroup", "_acrossGroup"],
+      "isDevicePhysical": [
+        "osDevicePhysical",
+        "isDevacePhysical",
+        "usDevicePhysical"
+      ],
+      "setPluginRegistrantCallback:": [
+        "setPluginRegostrantCallback:",
+        "setPlaginRegistrantCallback:",
+        "sitPluginRegistrantCallback:"
+      ],
+      "deleteItem:": ["deloteItem:", "diloteItem:", "doloteItem:"],
+      "getContentFromKeyChain": [
+        "getCantentFromKeyChain",
+        "gitContentFromKeyChain",
+        "gotCententFromKeyChain"
+      ],
+      "allAccounts:": ["allAccountz:", "ellAccounts:", "ullAccounts:"],
+      "_synchronizationMode": [
+        "_synchranizationMode",
+        "_synchrenizationMode",
+        "_synchranizetionMode"
+      ],
+      "errorWithCode:": ["errerWithCode:", "irrorWithCode:", "orrorWithCode:"],
+      "userNotificationCenter": [
+        "userNatificationCenter",
+        "userNetificationCenter",
+        "usarNotificationCenter"
+      ],
+      "getUUID": ["gotUUID", "gitUUID", "gatUUID"],
+      "setPassword:forService:account:": [
+        "setPazzword:forService:account:",
+        "setPessword:forService:account:",
+        "sitPassword:forService:account:"
+      ],
+      "setAccessGroup:": [
+        "setAccessGroup:",
+        "satAccessGroup:",
+        "setIxcessGroup:"
+      ],
+      "detachFromEngineForRegistrar:": [
+        "detochFromEngineForRegistrar:",
+        "ditechFromEngineForRegistrar:",
+        "detuchFromEngineForRegistrar:"
+      ],
+      "isSynchronizationAvailable": [
+        "isSynchranizationAvailable",
+        "isSynchrenizationAvailable",
+        "osSynchronizationAvailable"
+      ],
+      "setPasswordObject:": [
+        "setPazzwordObject:",
+        "setPasswordUbject:",
+        "sitPasswordObject:"
+      ],
+      "allAccounts": ["allAccounts", "ullAccounts", "ellAccounts"],
+      "passwordForService:account:": [
+        "pazzwordForService:account:",
+        "pesswordForService:account:",
+        "passwurdForService:account:"
+      ],
+      "deletePasswordForService": [
+        "daletePazzwordForService",
+        "delotePasswordForService",
+        "delatePazzwordForService"
+      ],
+      "accessibilityType": [
+        "acressibilityType",
+        "eccassibilityType",
+        "acrassibilityType"
+      ],
+      "synchronizationMode": [
+        "synchranizationMode",
+        "synchrenizationMode",
+        "synchranizetionMode"
+      ],
+      "setSynchronizationMode": [
+        "setSynchranizationMode",
+        "satSynchronizationMode",
+        "setSynchrenizationMode"
+      ]
     }
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/XHPhoto.framework/XHPhoto",
     "replacements": {
-      "authorWithType:": ["autharWithType:"],
-      "handelClickWithActionSheet:buttonIndex:": [
-        "handleClickWithActionSheet:buttonIndex:"
+      "authorWithType:": [
+        "autharWithType:",
+        "ethorWithType:",
+        "othorWithType:"
       ],
-      "photoBlock": ["photaBlock"],
-      "setPhotoBlock:": ["sotPhotoBlock:"],
-      "setTempPhotoBlock:": ["sotTempPhotoBlock:"],
-      "showCameraCanEdit:photo:": ["shewCameraCanEdit:photo:"],
-      "showCanEdit:photo:": ["shewCanEdit:photo:"],
-      "showPhotoLibraryCanEdit:photo:": ["shewPhotoLibraryCanEdit:photo:"],
-      "tempPhotoBlock": ["tempPhetoBlock"]
+      "handelClickWithActionSheet:buttonIndex:": [
+        "handleClickWithActionSheet:buttonIndex:",
+        "hondelClickWithActionSheet:buttonIndex:",
+        "handelCluckWithActionSheet:buttonIndex:"
+      ],
+      "photoBlock": ["photaBlock", "phetaBlock", "phatoBlock"],
+      "setPhotoBlock:": ["sotPhotoBlock:", "sitPhotoBlock:", "sutPhotoBlock:"],
+      "setTempPhotoBlock:": [
+        "sotTempPhotoBlock:",
+        "setTompPhotoBlock:",
+        "setTempPhetoBlock:"
+      ],
+      "showCameraCanEdit:photo:": [
+        "shewCameraCanEdit:photo:",
+        "shawCameraCanEdit:photo:",
+        "showCamiraCanEdit:photo:"
+      ],
+      "showCanEdit:photo:": [
+        "shewCanEdit:photo:",
+        "shawCanEdit:photo:",
+        "showCinEdit:photo:"
+      ],
+      "showPhotoLibraryCanEdit:photo:": [
+        "shewPhotoLibraryCanEdit:photo:",
+        "shawPhotoLibraryCanEdit:photo:",
+        "showPhetoLibraryCanEdit:photo:"
+      ],
+      "tempPhotoBlock": ["tempPhetoBlock", "timpPhotoBlock", "tumpPhotoBlock"]
     }
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/city_pickers.framework/city_pickers",
     "replacements": {
-      "detachFromEngineForRegistrar:": ["detochFromEngineForRegistrar:"],
-      "setPluginRegistrantCallback:": ["setPlugonRegistrantCallback:"]
+      "detachFromEngineForRegistrar:": [
+        "detochFromEngineForRegistrar:",
+        "detuchFromEngineForRegistrar:",
+        "detichFromEngineForRegistrar:"
+      ],
+      "setPluginRegistrantCallback:": [
+        "setPlugonRegistrantCallback:",
+        "setPlaginRegistrantCallback:",
+        "sitPluginRegistrantCallback:"
+      ]
     }
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/FMDB.framework/FMDB",
     "replacements": {
-      "unsignedLongLongIntForColumn:": ["unsugnedLongLongIntForColumn:"]
+      "unsignedLongLongIntForColumn:": [
+        "unsugnedLongLongIntForColumn:",
+        "unsagnedLongLongIntForColumn:",
+        "unsignedLangLongIntForColumn:"
+      ]
     }
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/gesture_recognition.framework/gesture_recognition",
     "replacements": {
-      "detachFromEngineForRegistrar:": ["detuchFromEngineForRegistrar:"],
-      "setPluginRegistrantCallback:": ["setPloginRegistrantCallback:"]
+      "detachFromEngineForRegistrar:": [
+        "detuchFromEngineForRegistrar:",
+        "ditachFromEngineForRegistrar:",
+        "detochFromEngineForRegistrar:"
+      ],
+      "setPluginRegistrantCallback:": [
+        "setPloginRegistrantCallback:",
+        "setPlugonRegistrantCallback:",
+        "setPlaginRegistrantCallback:"
+      ]
     }
   },
   {
     "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/gesture_recognition.framework/location",
     "replacements": {
-      "onCancelWithArguments:": ["onConcelWithArguments:"]
+      "onCancelWithArguments:": [
+        "onConcelWithArguments:",
+        "unCancelWithArguments:",
+        "onCencelWithArguments:"
+      ]
     }
   },
   {

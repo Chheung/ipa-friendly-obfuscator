@@ -1,5 +1,5 @@
-caomei_tf_clone/
-caomei_tf/
+output/
+input/
 Assets.xcassets/
 .DS_Store
 */.DS_Store

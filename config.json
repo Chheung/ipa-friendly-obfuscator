@@ -1,6 +1,6 @@
 [
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/SSZipArchive.framework/SSZipArchive",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/SSZipArchive.framework/SSZipArchive",
     "replacements": {
       "_path": ["_love", "_hate", "_good", "_fear", "_fire", "_aura"],
       "isFilePasswordProtectedAtPath:": [
@@ -89,15 +89,15 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/image_picker_ios.framework/image_picker_ios",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/image_picker_ios.framework/image_picker_ios",
     "replacements": { "writeValue:": ["wroteValue:"] }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/video_player_avfoundation.framework/video_player_avfoundation",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/video_player_avfoundation.framework/video_player_avfoundation",
     "replacements": {}
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/YYImage.framework/YYImage",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/YYImage.framework/YYImage",
     "replacements": {
       "animatedImageType": ["animatedImageTypo"],
       "blendFromIndex": ["blendFramIndex"],
@@ -110,7 +110,7 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Runner",
+    "path_to_file_name": "./output/Payload/Runner.app/Runner",
     "replacements": {
       "setDownloadState:": ["setDawnloadState:"],
       "getSysCpuUsage": ["gotSysCpuUsage"],
@@ -153,7 +153,7 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/GTMBase64.framework/GTMBase64",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/GTMBase64.framework/GTMBase64",
     "replacements": {
       "decodeBytes:length:": ["decadeBytes:length:"],
       "stringByEncodingBytes:length:": ["stringByEncadingBytes:length:"],
@@ -168,14 +168,14 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/flutter_vibrate.framework/flutter_vibrate",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/flutter_vibrate.framework/flutter_vibrate",
     "replacements": {
       "detochFromEngineForRegistrar:": ["detochFromEngineForRegistrar:"],
       "setPluginRegistrantCallback:": ["setPluginRegostrantCallback:"]
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/image_save.framework/image_save",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/image_save.framework/image_save",
     "replacements": {
       "getAlbumGroup": ["getUlbumGroup"],
       "getCurrentPhotoCollectionWithTitle:": [
@@ -188,7 +188,7 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/image_editor_common.framework/image_editor_common",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/image_editor_common.framework/image_editor_common",
     "replacements": {
       "addText:": ["plsText:"],
       "colorMatrix:": ["colorMotrix:"],
@@ -245,7 +245,7 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/device_info.framework/device_info",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/device_info.framework/device_info",
     "replacements": {
       "accountsForService:": ["accountsForSarvice:"],
       "_label": ["_lobel"],
@@ -278,7 +278,7 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/XHPhoto.framework/XHPhoto",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/XHPhoto.framework/XHPhoto",
     "replacements": {
       "authorWithType:": ["autharWithType:"],
       "handelClickWithActionSheet:buttonIndex:": [
@@ -294,27 +294,27 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/city_pickers.framework/city_pickers",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/city_pickers.framework/city_pickers",
     "replacements": {
       "detachFromEngineForRegistrar:": ["detochFromEngineForRegistrar:"],
       "setPluginRegistrantCallback:": ["setPlugonRegistrantCallback:"]
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/FMDB.framework/FMDB",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/FMDB.framework/FMDB",
     "replacements": {
       "unsignedLongLongIntForColumn:": ["unsugnedLongLongIntForColumn:"]
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/gesture_recognition.framework/gesture_recognition",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/gesture_recognition.framework/gesture_recognition",
     "replacements": {
       "detachFromEngineForRegistrar:": ["detuchFromEngineForRegistrar:"],
       "setPluginRegistrantCallback:": ["setPloginRegistrantCallback:"]
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/gesture_recognition.framework/location",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/gesture_recognition.framework/location",
     "replacements": {
       "onCancelWithArguments:": ["onConcelWithArguments:"]
     }
@@ -334,7 +334,7 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Payload/Runner.app/Frameworks/",
+    "path_to_file_name": "./output/Payload/Runner.app/Frameworks/",
     "replace_all_in_dir": true,
     "replacements": {
       "lin/": ["zyk/"],
@@ -348,7 +348,7 @@
     }
   },
   {
-    "path_to_file_name": "./caomei_tf_clone/Symbols/",
+    "path_to_file_name": "./output/Symbols/",
     "replace_all_in_dir": true,
     "replacements": {
       "lin/": ["zyk/"],

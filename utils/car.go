@@ -39,7 +39,7 @@ type LaunchImageContents struct {
 
 func ExtractCARFile() error {
 	cmd := exec.Command("mkdir", "-p", "./Assets.xcassets")
-	cmd2 := exec.Command("./acextract", "-i", "./caomei_tf_clone/Payload/Runner.app/Assets.car", "-o", "./Assets.xcassets")
+	cmd2 := exec.Command("./acextract", "-i", "./output/Payload/Runner.app/Assets.car", "-o", "./Assets.xcassets")
 	_, err := cmd.Output()
 	if err != nil {
 		fmt.Println(err.Error())
@@ -56,7 +56,7 @@ func ExtractCARFile() error {
 }
 
 func RepackCARFile() error {
-	cmd := exec.Command("actool", "--output-format", "human-readable-text", "--notices", "--warnings", "--platform", "iphoneos", "--minimum-deployment-target", "12.0", "--target-device", "iphone", "--target-device", "ipad", "--compile", "./caomei_tf_clone/Payload/Runner.app", "./Assets.xcassets")
+	cmd := exec.Command("actool", "--output-format", "human-readable-text", "--notices", "--warnings", "--platform", "iphoneos", "--minimum-deployment-target", "12.0", "--target-device", "iphone", "--target-device", "ipad", "--compile", "./output/Payload/Runner.app", "./Assets.xcassets")
 	_, err := cmd.Output()
 	if err != nil {
 		fmt.Println(err.Error())

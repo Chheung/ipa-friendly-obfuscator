@@ -48,16 +48,16 @@ func main() {
 		log.Fatalf("Failed to remove existing AssetsOutput folder: %v", err)
 	}
 
-	// Remove the folder "caomei_tf_clone" if it exists
-	err = utils.RemoveDirIfExists("caomei_tf_clone")
+	// Remove the folder "output" if it exists
+	err = utils.RemoveDirIfExists("output")
 	if err != nil {
-		log.Fatalf("Failed to remove existing caomei_tf_clone folder: %v", err)
+		log.Fatalf("Failed to remove existing output folder: %v", err)
 	}
 
 	configFile := "./config.json"
 	// Copy the folder
-	srcFolder := "caomei_tf"
-	destFolder := "caomei_tf_clone"
+	srcFolder := "input"
+	destFolder := "output"
 
 	err = utils.CopyDir(srcFolder, destFolder)
 	if err != nil {
@@ -110,7 +110,7 @@ func main() {
 	}
 
 	// Example directory to process
-	directory := "./caomei_tf_clone/Payload/Runner.app/"
+	directory := "./output/Payload/Runner.app/"
 	err = utils.ProcessImagesInDirectory(directory)
 	if err != nil {
 		log.Fatalf("Failed to process images in directory: %v", err)
@@ -134,7 +134,7 @@ func main() {
 	// 	log.Fatalf("Failed to group images by folder: %v", err)
 	// }
 
-	icon1Path := "./caomei_tf_clone/Payload/Runner.app/AppIcon60x60@2x.png"
+	icon1Path := "./output/Payload/Runner.app/AppIcon60x60@2x.png"
 	err = utils.ConvertCgBIToPng(icon1Path, icon1Path)
 	if err != nil {
 		log.Fatalf("Error converting CgBI to PNG: %v", err)
@@ -145,7 +145,7 @@ func main() {
 		log.Fatalf("Error getting image stats of icon1: %v", err)
 	}
 
-	icon2Path := "./caomei_tf_clone/Payload/Runner.app/AppIcon76x76@2x~ipad.png"
+	icon2Path := "./output/Payload/Runner.app/AppIcon76x76@2x~ipad.png"
 	err = utils.ConvertCgBIToPng(icon2Path, icon2Path)
 	if err != nil {
 		log.Fatalf("Error converting CgBI to PNG: %v", err)
@@ -174,7 +174,7 @@ func main() {
 
 	// Create the final zip file
 	zipFileName := "final.zip"
-	err = utils.CreateZipFromFolder("caomei_tf_clone", zipFileName)
+	err = utils.CreateZipFromFolder("output", zipFileName)
 	if err != nil {
 		log.Fatalf("Failed to create zip file: %v", err)
 	}
@@ -204,8 +204,8 @@ func mergeMap(m1 map[string][]string, m2 map[string][]string) map[string][]strin
 
 // func main() {
 // 	// Specify the directory to search
-// 	dir := "./caomei_tf"
-// 	targetString := []byte("live3_app_caomei")
+// 	dir := "./AppStoreInfo.plist"
+// 	targetString := []byte("Serial")
 
 // 	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
 // 		if err != nil {

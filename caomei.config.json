@@ -55,10 +55,10 @@
         "unZipFileAtPath:toDestination:progressHandler:completionHandler:",
         "unZipFileInPath:toDestination:progressHandler:completionHandler:"
       ],
-      "writeData:filename:compressionLevel:password:AES:": [
-        "writeData:Filename:compressionLevel:Secretzz:AES:",
-        "writeData:Filename:compressionLevel:Secretzz:AES:",
-        "writeData:Filename:compressionLevel:Secretzz:AES:"
+      "writeData:filename:compressionLogon:password:AES:": [
+        "writeData:Filename:compressionLogon:Secretzz:AES:",
+        "writeData:Filename:compressionLogon:Secretzz:AES:",
+        "writeData:Filename:compressionLogon:Secretzz:AES:"
       ],
       "writeData:filename:withPassword:": [
         "writedata:Filename:withsecretzz:",
@@ -71,11 +71,11 @@
         "writedata:withsecretaz:",
         "writedata:withsecrettz:"
       ],
-      "writeFileAtPath:withFileName:compressionLevel:password:AES:": [
-        "writeFileUtPath:withFileName:compressionLevel:Secretzz:AES:",
-        "writeFileUtPath:wothFileName:compressionLevel:Secretzz:AES:",
-        "writeFileUtPath:wathFileName:compressionLevel:Secretzz:AES:",
-        "writeFileUtPath:wethFileName:compressionLevel:Secretzz:AES:"
+      "writeFileAtPath:withFileName:compressionLogon:password:AES:": [
+        "writeFileUtPath:withFileName:compressionLogon:Secretzz:AES:",
+        "writeFileUtPath:wothFileName:compressionLogon:Secretzz:AES:",
+        "writeFileUtPath:wathFileName:compressionLogon:Secretzz:AES:",
+        "writeFileUtPath:wethFileName:compressionLogon:Secretzz:AES:"
       ],
       "writeFileAtPath:withFileName:withPassword:": [
         "writefileUtpath:withfilename:withsecretzz:",
@@ -87,10 +87,10 @@
         "writefolderUtpath:withfeldername:withsecretzz:",
         "writefolderUtpath:withfaldername:withsecretzz:"
       ],
-      "writeSymlinkFileAtPath:withFileName:compressionLevel:password:AES:": [
-        "writeSymlinkFileUtPath:withFileName:compressionLevel:Secretzz:AES:",
-        "writeSymlinkFileOtPath:withFileName:compressionLevel:Secretzz:AES:",
-        "writeSymlinkFileAtPath:withFileName:compressionLevel:Secretzz:AES:"
+      "writeSymlinkFileAtPath:withFileName:compressionLogon:password:AES:": [
+        "writeSymlinkFileUtPath:withFileName:compressionLogon:Secretzz:AES:",
+        "writeSymlinkFileOtPath:withFileName:compressionLogon:Secretzz:AES:",
+        "writeSymlinkFileAtPath:withFileName:compressionLogon:Secretzz:AES:"
       ],
       "zipArchiveDidUnzipArchiveAtPath:zipInfo:unzippedPath:": [
         "zipArchiveDudUnzipArchiveUtPath:zipInfo:unzippedPath:",
@@ -230,7 +230,7 @@
         "ApduteFrameRate",
         "EpduteFrameRate"
       ],
-      "volumeLevel": ["volomeLevel", "volojeLevel", "volomeLefel"],
+      "volumeLogon": ["volomeLogon", "volojeLogon", "volomeLefel"],
       "setMaxIncreaseDurationMs:": [
         "setMoxIncreaseDurationMs:",
         "setMoxfncreaseDurationMs:",
@@ -605,42 +605,42 @@
     "path_to_file_name": "global",
     "is_global": true,
     "replacements": {
-      "lin/": ["kia/"],
-      "live3_app/": ["level_app/"],
-      "pokt4_app/": ["goat8_app/"],
-      "fkbut_wiobmt_zkg/": ["rayay_wombly_pkg/"],
-      "live3_app_caomei": ["level_app_lanmei"],
-      "Live3": ["Level"],
-      "bzmclcpdymzkcbbzcvvebpwwsebi": ["developmentfocusallaiproject"],
-      "build_script_ios": ["dploy_update_mac"]
+      "lin/": ["mog/"],
+      "live3_app/": ["logon_app/"],
+      "pokt4_app/": ["gath1/"],
+      "fkbut_wiobmt_zkg/": ["fafgg_ggmbfy_pkg/"],
+      "live3_app_caomei": ["logon_app_jojomi"],
+      "Live3": ["Logon"],
+      "bzmclcpdymzkcbbzcvvebpwwsebi": ["fhamprjghsjrffwxfqjlapqofhsq"],
+      "build_script_ios": ["dbogy_dodok_gac"]
     }
   },
   {
     "path_to_file_name": "./output/Payload/Runner.app/Frameworks/",
     "replace_all_in_dir": true,
     "replacements": {
-      "lin/": ["kia/"],
-      "live3_app/": ["level_app/"],
-      "pokt4_app/": ["goat8_app/"],
-      "fkbut_wiobmt_zkg/": ["rayay_wombly_pkg/"],
-      "live3_app_caomei": ["level_app_lanmei"],
-      "Live3": ["Level"],
-      "bzmclcpdymzkcbbzcvvebpwwsebi": ["developmentfocusallaiproject"],
-      "build_script_ios": ["dploy_update_mac"]
+      "lin/": ["mog/"],
+      "live3_app/": ["logon_app/"],
+      "pokt4_app/": ["gath1/"],
+      "fkbut_wiobmt_zkg/": ["fafgg_ggmbfy_pkg/"],
+      "live3_app_caomei": ["logon_app_jojomi"],
+      "Live3": ["Logon"],
+      "bzmclcpdymzkcbbzcvvebpwwsebi": ["fhamprjghsjrffwxfqjlapqofhsq"],
+      "build_script_ios": ["dbogy_dodok_gac"]
     }
   },
   {
     "path_to_file_name": "./output/Symbols/",
     "replace_all_in_dir": true,
     "replacements": {
-      "lin/": ["kia/"],
-      "live3_app/": ["level_app/"],
-      "pokt4_app/": ["goat8_app/"],
-      "fkbut_wiobmt_zkg/": ["rayay_wombly_pkg/"],
-      "live3_app_caomei": ["level_app_lanmei"],
-      "Live3": ["Level"],
-      "bzmclcpdymzkcbbzcvvebpwwsebi": ["developmentfocusallaiproject"],
-      "build_script_ios": ["dploy_update_mac"]
+      "lin/": ["mog/"],
+      "live3_app/": ["logon_app/"],
+      "pokt4_app/": ["gath1/"],
+      "fkbut_wiobmt_zkg/": ["fafgg_ggmbfy_pkg/"],
+      "live3_app_caomei": ["logon_app_jojomi"],
+      "Live3": ["Logon"],
+      "bzmclcpdymzkcbbzcvvebpwwsebi": ["fhamprjghsjrffwxfqjlapqofhsq"],
+      "build_script_ios": ["dbogy_dodok_gac"]
     }
   }
 ]

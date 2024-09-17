@@ -205,7 +205,7 @@ func mergeMap(m1 map[string][]string, m2 map[string][]string) map[string][]strin
 // func main() {
 // 	// Specify the directory to search
 // 	dir := "./input"
-// 	targetString := []byte("fkbut_wiobmt_zkg")
+// 	targetString := []byte("bzmclcpdymzkcbbzcvvebpwwsebi")
 
 // 	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
 // 		if err != nil {
